@@ -1,168 +1,375 @@
 <!doctype html>
 <html lang="es-CL">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#173b42" />
-    <title>Kineplanet · Kinesiología a domicilio en Santiago</title>
-    <meta name="description" content="Kinesiología a domicilio en Santiago para niños, adultos y personas mayores. Atención respiratoria, traumatológica y neurológica. Consulta por WhatsApp." />
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="es_CL" />
-    <meta property="og:title" content="Kineplanet · El cuidado se siente mejor en casa" />
-    <meta property="og:description" content="Atención kinesiológica personalizada a domicilio en Santiago. Cerca de ti y de tu familia, desde 2012." />
-    <meta data-media="heroBanner" property="og:image" content="./public/images/hero-casa-cielo.webp" />
-    <link rel="icon" href="./public/images/favicon.svg" type="image/svg+xml" />
-    <script>
-      // Font preloads use CORS on HTTP; local files load their fonts through CSS.
-      if (location.protocol !== 'file:') {
-        for (const name of ['manrope']) {
-          const link = document.createElement('link');
-          Object.assign(link, { rel: 'preload', as: 'font', type: 'font/woff2', crossOrigin: 'anonymous', href: `./public/fonts/${name}-variable.woff2` });
-          document.head.append(link);
-        }
-      }
-    </script>
-    <link data-media="heroBanner" rel="preload" href="./public/images/hero-casa-cielo.webp" as="image" fetchpriority="high" media="(min-width: 601px)" />
-    <link data-media="heroBannerMobile" rel="preload" href="./public/images/hero-casa-cielo-movil.webp" as="image" fetchpriority="high" media="(max-width: 600px)" />
-    <link rel="stylesheet" href="./src/styles.css" />
-    <link rel="stylesheet" href="./src/experience.css" />
-    <link rel="stylesheet" href="./src/polish.css" />
-    <link rel="stylesheet" href="./src/typography.css" />
-    <link rel="stylesheet" href="./src/structure.css" />
-    <link rel="stylesheet" href="./src/hero.css" />
-    <link rel="stylesheet" href="./src/process-timeline.css" />
-    <link rel="stylesheet" href="./src/evaluation.css" />
-    <link rel="stylesheet" href="./src/credentials.css" />
-    <link rel="stylesheet" href="./src/section-headings.css" />
-    <script defer src="./public/vendor/gsap.min.js"></script>
-    <script defer src="./public/vendor/ScrollTrigger.min.js"></script>
-    <script defer src="./src/site.js"></script>
-  </head>
-  <body>
-    <a class="skip-link" href="#contenido">Saltar al contenido</a>
-
-
-
-    <header class="site-header" id="inicio">
-      <a class="brand" href="#inicio" aria-label="Kineplanet, inicio"><img data-media="logo" src="./public/images/kineplanet-logo.png" alt="Kineplanet. Kinesiología en tu hogar. Contigo desde el 2012." width="1080" height="327" /><img data-media="logo" class="brand-wordmark" src="./public/images/kineplanet-logo.png" alt="" aria-hidden="true" width="1080" height="327" /></a>
-      <nav class="desktop-nav" aria-label="Navegación principal"><a href="#nosotros">Equipo</a><a href="#servicios">Servicios</a><a href="#proceso">Proceso</a><a href="#blog">Blog</a></nav>
-      <a class="button button-cream header-cta" data-whatsapp href="https://wa.me/56933965202?text=Hola%2C%20me%20gustar%C3%ADa%20consultar%20por%20una%20atenci%C3%B3n%20de%20kinesiolog%C3%ADa%20a%20domicilio.%20La%20comuna%20es%3A%20____%20y%20la%20atenci%C3%B3n%20que%20necesito%20es%3A%20____.">Conversemos <span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span></a>
-      <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu"><span>Menú</span><span class="menu-lines" aria-hidden="true"></span></button>
-      <nav class="mobile-menu" id="mobile-menu" aria-label="Navegación móvil" hidden><a href="#nosotros">Equipo</a><a href="#servicios">Servicios</a><a href="#credenciales">Credenciales</a><a href="#testimonios">Testimonios</a><a href="#proceso">Proceso</a><a href="#cobertura">Precios</a><a href="#preguntas">Preguntas frecuentes</a><a href="#blog">Blog</a><a href="#newsletter">Newsletter</a><a data-whatsapp href="https://wa.me/56933965202?text=Hola%2C%20me%20gustar%C3%ADa%20consultar%20por%20una%20atenci%C3%B3n%20de%20kinesiolog%C3%ADa%20a%20domicilio.%20La%20comuna%20es%3A%20____%20y%20la%20atenci%C3%B3n%20que%20necesito%20es%3A%20____.">Consultar por WhatsApp <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a></nav>
-    </header>
-
-    <main id="contenido">
-
-<section data-home-section="hero" class="hero hero-photographic scene" data-scene="home-hero" aria-labelledby="hero-title">
-<div class="hero-stage scene-stage">
- <div class="hero-media"><picture><source data-media="heroBannerMobile" media="(max-width:600px)" srcset="./public/images/hero-casa-cielo-movil.webp"/><img data-media="heroBanner" id="hero-photo" src="./public/images/hero-casa-cielo.webp" alt="Imagen ilustrativa de una kinesióloga acompañando a una persona mayor durante un ejercicio de marcha en la terraza de su hogar." width="1659" height="948" fetchpriority="high"/></picture><div class="hero-scrim" aria-hidden="true"></div></div>
- <div class="hero-content"><h1 id="hero-title"><span>Kinesiología</span><span>en tu hogar.</span></h1><div class="hero-actions"><a class="button hero-primary" data-whatsapp href="https://wa.me/56933965202?text=Hola%2C%20me%20gustar%C3%ADa%20consultar%20por%20una%20atenci%C3%B3n%20de%20kinesiolog%C3%ADa%20a%20domicilio.%20La%20comuna%20es%3A%20____%20y%20la%20atenci%C3%B3n%20que%20necesito%20es%3A%20____.">Coordinar mi atención</a></div></div>
-</div>
-</section>
-
-<section data-home-section="equipo" class="team team-about section-pad" id="nosotros" aria-labelledby="team-title">
- <div class="team-about-heading">
-  <header class="section-heading"><h2 id="team-title">Nuestro equipo<span class="heading-dot">.</span></h2></header>
-  <dl class="team-stats"><div><dt>Profesionales</dt><dd>12</dd></div><div><dt>Comunas</dt><dd>10</dd></div><div><dt>Objetivo</dt><dd>1</dd></div></dl>
- </div>
- <div class="team-panels" role="region" aria-label="Galería de especialidades con retratos ilustrativos">
-  <button class="team-panel" type="button" data-position="center" aria-label="Respiratoria" aria-pressed="true"><img data-media="teamRespiratory" class="" src="./public/images/retrato-respiratoria-ilustrativo.webp" alt="Retrato generado de muestra, no corresponde a un profesional real." width="520" height="1024" loading="lazy"/></button>
-  <button class="team-panel" type="button" data-position="right" aria-label="Traumatológica" aria-pressed="false"><img data-media="teamTrauma" class="" src="./public/images/retrato-traumatologica-ilustrativo.webp" alt="Retrato generado de muestra, no corresponde a un profesional real." width="520" height="1024" loading="lazy"/></button>
-  <button class="team-panel" type="button" data-position="left" aria-label="Neurológica" aria-pressed="false"><img data-media="teamNeuro" class="" src="./public/images/retrato-neurologica-ilustrativo.webp" alt="Retrato generado de muestra, no corresponde a un profesional real." width="520" height="1024" loading="lazy"/></button>
- </div>
- <p class="team-selected" aria-live="polite">Respiratoria</p>
- <div class="team-controls" hidden>
-  <button type="button" data-team-step="-1" aria-label="Retrato anterior">
-   <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m15 6-6 6 6 6"/></svg>
-  </button>
-  <div class="team-scrubber">
-   <input class="team-range" type="range" min="1" max="3" step="1" value="1" aria-label="Elegir especialidad" aria-valuetext="Respiratoria" />
-   <button class="team-play" type="button" aria-label="Reanudar avance automático">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path class="team-play-icon" d="m9 6 10 6-10 6z"/><path class="team-pause-icon" d="M8 6h3v12H8zm5 0h3v12h-3z"/></svg>
-   </button>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Kinesiología a domicilio en Santiago. Coordina tu atención respiratoria, traumatológica o neurológica con Kineplanet.">
+  <meta name="theme-color" content="#f6f7f2">
+  <title>Kineplanet — Kinesiología en tu hogar</title>
+  <link rel="icon" href="./public/images/favicon.svg" type="image/svg+xml">
+  <script>
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches &&
+        !new URLSearchParams(location.search).has('tipos') && !location.hash) {
+      document.documentElement.classList.add('arrival-loading');
+    }
+  </script>
+  <link rel="stylesheet" href="./src/process-timeline.css">
+  <link rel="stylesheet" href="./src/redesign.css">
+  <script src="./src/redesign.js" defer></script>
+  <script src="./src/redesign-scroll.js" defer></script>
+  <script src="./src/redesign-timeline.js" defer></script>
+</head>
+<body id="inicio">
+  <div class="arrival-loader" aria-hidden="true">
+    <div class="arrival-loader-content">
+      <img src="./public/images/kineplanet-logo.png" alt="" width="1080" height="327">
+      <span class="arrival-loader-line"></span>
+    </div>
   </div>
-  <button type="button" data-team-step="1" aria-label="Siguiente retrato">
-   <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
-  </button>
- </div>
- <div class="team-contact"><a class="text-link" data-whatsapp href="https://wa.me/56933965202?text=Hola%2C%20me%20gustar%C3%ADa%20consultar%20por%20una%20atenci%C3%B3n%20de%20kinesiolog%C3%ADa%20a%20domicilio.%20La%20comuna%20es%3A%20____%20y%20la%20atenci%C3%B3n%20que%20necesito%20es%3A%20____.">Consultar por un profesional <span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span></a></div>
-</section>
+  <svg class="icons" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="diagonal" viewBox="0 0 24 24"><path d="M6.5 17.5 17.5 6.5M8.5 6.5h9v9"/></symbol>
+    <symbol id="left" viewBox="0 0 24 24"><path d="M19 12H5m5-5-5 5 5 5"/></symbol>
+    <symbol id="right" viewBox="0 0 24 24"><path d="M5 12h14m-5-5 5 5-5 5"/></symbol>
+    <symbol id="plus" viewBox="0 0 24 24"><path d="M5 12h14M12 5v14"/></symbol>
+  </svg>
+  <a class="skip-link" href="#contenido">Ir al contenido</a>
+  <header class="site-bar">
+    <div class="frame bar-inner">
+      <a class="brand" href="#inicio" aria-label="Kineplanet, inicio">
+        <img src="./public/images/kineplanet-logo.png" alt="" width="1080" height="327">
+      </a>
+      <nav class="desktop-nav" aria-label="Navegación principal">
+        <a href="#equipo">Equipo</a>
+        <a href="https://www.lascondes.cl/kineplanet/">Convenios</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <a class="bar-contact" href="#evaluacion">Agendar visita <svg aria-hidden="true"><use href="#diagonal"/></svg></a>
+      <details class="mobile-nav">
+        <summary>Menú <svg aria-hidden="true"><use href="#plus"/></svg></summary>
+        <nav aria-label="Navegación móvil">
+          <a href="#equipo">Equipo</a><a href="https://www.lascondes.cl/kineplanet/">Convenios</a><a href="#servicios">Servicios</a>
+          <a href="#contacto">Contacto</a><a href="#evaluacion">Agendar visita</a>
+        </nav>
+      </details>
+    </div>
+  </header>
 
-<section class="credentials credentials-stats section-pad" id="credenciales" data-home-section="credenciales" aria-labelledby="credentials-title">
- <header class="section-heading"><h2 id="credentials-title">Una trayectoria de atención en casa<span class="heading-dot">.</span></h2></header>
- <svg class="credentials-movement" viewBox="0 0 1440 340" aria-hidden="true" focusable="false">
-  <path d="M-50 235C70 235 98 78 225 78S368 263 492 263 650 113 782 113 941 222 1074 222 1240 63 1364 63 1450 122 1490 122"/>
-  <path class="movement-secondary" d="M-50 259C70 259 98 102 225 102S368 287 492 287 650 137 782 137 941 246 1074 246 1240 87 1364 87 1450 146 1490 146"/>
-  <circle class="movement-point" cx="225" cy="78" r="5"/><circle class="movement-point" cx="782" cy="113" r="5"/><circle class="movement-point" cx="1364" cy="63" r="5"/>
- </svg>
- <dl class="credentials-numbers" aria-label="Trayectoria de Kineplanet"><div><dt>Kinesiología en los hogares de Santiago.</dt><dd><span class="credentials-since">Desde</span>2012</dd></div><div><dt>Atenciones realizadas.</dt><dd>+40.000</dd></div></dl>
- 
-</section>
+  <main id="contenido">
+    <section class="arrival-hero" aria-labelledby="hero-title">
+      <div class="arrival-backdrop" aria-hidden="true">
+        <img src="./public/images/hero-sesion-domestica.webp" alt="" width="1536" height="1024" fetchpriority="high">
+      </div>
+      <div class="frame arrival-copy">
+        <h1 id="hero-title">Tu rehabilitación,<br><em>sin salir de casa</em></h1>
+        <p>Kinesiología a domicilio en Santiago. Coordina una primera visita para ti o para un familiar.</p>
+        <div class="arrival-actions">
+          <a class="action" href="https://wa.me/56933965202?text=Hola%2C%20quiero%20coordinar%20una%20visita%20de%20kinesiolog%C3%ADa%20en%20casa.">Agenda tu atención <svg aria-hidden="true"><use href="#right"/></svg></a>
+          <a class="action arrival-secondary" href="#proceso">Cómo funciona</a>
+        </div>
+        <ul class="arrival-benefits" aria-label="Características de la atención">
+          <li>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m2 11 10-8 10 8M5 10v11h5v-6h4v6h5V10"/></svg>
+            <span>Atención<br>en tu hogar</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7" r="4"/><path d="M3.5 22v-1a7 7 0 0 1 7-7h3a7 7 0 0 1 7 7v1"/></svg>
+            <span>Kinesiólogos<br>Expertos</span>
+          </li>
+        </ul>
+      </div>
+    </section>
 
-<section data-home-section="testimonios" id="testimonios" class="testimonials section-pad" aria-labelledby="reviews-title"><header class="section-heading"><h2 id="reviews-title">Historias de atención<span class="heading-dot">.</span></h2></header><div class="reviews-heading"><div class="review-controls"><button class="round-button" id="review-prev" aria-label="Reseña anterior"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 12H4m6-6-6 6 6 6"/></svg></button><button class="round-button" id="review-next" aria-label="Reseña siguiente"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></button></div></div><div class="review-layout"><div class="review-main" aria-live="polite" aria-atomic="true"><blockquote id="review-quote">«buenos profesionales, y la atención personalizada y a domicilio.»</blockquote><p id="review-author">Rodrigo García</p></div><aside class="pain-demo" aria-label="Demostración ilustrativa de una escala de dolor"><div class="pain-comparison"><span class="pain-initial">8</span><span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></span><strong id="pain-current">8</strong></div><p>Escala de dolor · /10</p><strong class="demo-label">Ejemplo ilustrativo</strong></aside></div><div class="pain-timeline" aria-hidden="true"><div class="pain-track"><div class="pain-fill" id="pain-fill"></div><span class="pain-marker" id="pain-marker"><span id="pain-caption">Ejemplo: inicio · 8</span></span></div><div class="pain-ticks"><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span></div></div><div class="review-pagination" id="review-pagination"><!-- render:review-pagination --><button class="review-dot" aria-label="Ver reseña de Rodrigo García" aria-current="true" data-review="0"></button><button class="review-dot" aria-label="Ver reseña de Pamela Contreras Neira" aria-current="false" data-review="1"></button><button class="review-dot" aria-label="Ver reseña de Elisa Vildosola" aria-current="false" data-review="2"></button><!-- /render:review-pagination --></div></section>
+    <section class="team chapter" id="equipo" aria-labelledby="team-title">
+      <div class="frame team-spread">
+        <div class="team-note" data-reveal>
+          <h2 id="team-title">Un equipo que te acompaña <span class="title-accent">en cada paso</span> de tu recuperación</h2>
+          <dl class="team-facts">
+            <div><dt>Profesionales</dt><dd>12</dd></div>
+            <div><dt>Comunas</dt><dd>10</dd></div>
+            <div><dt>Objetivo</dt><dd>1</dd></div>
+          </dl>
+          <a class="action" href="#retratos-equipo">Conocer al Equipo <svg aria-hidden="true"><use href="#right"/></svg></a>
+        </div>
+        <div class="team-portraits" id="retratos-equipo" data-reveal>
+          <figure>
+            <div class="team-portrait-photo">
+              <img src="./public/images/andrea-varela.jpg" alt="Retrato de Andrea Varela" width="1268" height="1308" loading="lazy">
+            </div>
+            <figcaption>Andrea Varela</figcaption>
+          </figure>
+          <figure>
+            <div class="team-portrait-photo">
+              <img src="./public/images/ximena-munoz.jpg" alt="Retrato de Ximena Muñoz" width="1268" height="1308" loading="lazy">
+            </div>
+            <figcaption>Ximena Muñoz</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
 
-<section data-home-section="carrusel" id="vida-en-casa" class="life-story scene" data-scene="life-at-home" aria-labelledby="life-title"><div class="life-stage scene-stage"><h2 id="life-title" class="life-statement"><span class="story-word"><span class="word-normal">Cuidamos</span><span class="word-bold" aria-hidden="true">Cuidamos</span></span> <span class="story-word"><span class="word-normal">tu</span><span class="word-bold" aria-hidden="true">tu</span></span> <span class="story-word"><span class="word-normal">movimiento.</span><span class="word-bold" aria-hidden="true">movimiento.</span></span> <br /> <span class="story-word"><span class="word-normal">Acompañamos</span><span class="word-bold" aria-hidden="true">Acompañamos</span></span> <span class="story-word"><span class="word-normal">tu</span><span class="word-bold" aria-hidden="true">tu</span></span> <span class="story-word"><span class="word-normal">vida.</span><span class="word-bold" aria-hidden="true">vida.</span></span></h2><div class="life-gallery">
- <figure class="life-frame"><img data-media="respiratory" class="" src="./public/images/respiratoria-en-casa.webp" alt="Imagen ilustrativa de una madre y su hijo acompañados durante una atención en casa." width="1536" height="1024" loading="lazy"/></figure>
- <figure class="life-frame"><img data-media="hero" class="" src="./public/images/cuidado-en-casa.webp" alt="Imagen ilustrativa de un ejercicio de movilidad guiado en el hogar." width="1536" height="1024" loading="lazy"/></figure>
- <figure class="life-frame"><img data-media="life" class="" src="./public/images/vida-cotidiana.webp" alt="Imagen ilustrativa de padre e hija compartiendo una actividad en su jardín." width="1536" height="1024" loading="lazy"/></figure>
- <figure class="life-frame life-frame-last"><img data-media="care" class="" src="./public/images/atencion-familiar-en-casa.webp" alt="Imagen ilustrativa de una atención de movilidad de rodilla junto a la familia." width="1536" height="1024" loading="lazy"/></figure>
-</div></div></section>
+    <section class="proof chapter" id="trayectoria" aria-labelledby="proof-title">
+      <div class="frame proof-layout">
+        <div class="proof-since" data-reveal>
+          <h2 id="proof-title">Desde <span>2012.</span></h2>
+          <p>Acompañando la recuperación<br>de nuestros pacientes.</p>
+        </div>
+        <div class="proof-total" data-reveal>
+          <strong>+40.000</strong>
+          <p>Atenciones realizadas<br>en hogares de Santiago.</p>
+        </div>
+      </div>
+    </section>
 
-<section class="services-group" id="servicios" data-home-section="servicios" aria-labelledby="services-title"><section class="specialties section-pad" id="especialidades" aria-labelledby="services-title">
-        <header class="section-heading"><h2 id="services-title">Un cuidado para cada momento<span class="heading-dot">.</span></h2></header><div class="specialties-intro"><div class="service-diagram" id="service-diagram" aria-hidden="true"><!-- render:service-diagram --><svg viewBox="0 0 340 290" fill="none" xmlns="http://www.w3.org/2000/svg"><path class="anatomy-line" d="M145 26c-7 18-16 29-33 35L69 79c-16 11-21 38-22 61l-5 91m153-205c7 18 16 29 33 35l43 18c16 11 21 38 22 61l5 91M85 106c2 39 14 64 12 99l-7 57m165-156c-2 39-14 64-12 99l7 57M145 26c12 9 38 9 50 0"/><path class="anatomy-highlight" d="M156 93c-11-14-28-3-42 18-14 21-23 47-18 69 4 19 22 22 38 16l23-12V101Zm28 0c11-14 28-3 42 18 14 21 23 47 18 69-4 19-22 22-38 16l-23-12v-83Z"/><path class="anatomy-fine" d="M170 53v63m0-1-31 24m31-24 31 24m-62-17v35m0-17-19 15m19-3 12 15m50-45v35m0-17 19 15m-19-3-12 15M165 60h10m-10 7h10m-10 7h10m-10 7h10m-10 7h10m-10 7h10"/><circle class="anatomy-fine" cx="170" cy="140" r="104" stroke-dasharray="2 7"/></svg><!-- /render:service-diagram --></div></div>
-        <div class="service-list" id="service-list"><!-- render:service-list --><details class="service-item" id="respiratoria" name="specialty" open><summary><span class="service-title">Respiratoria</span><span class="service-toggle" aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg></span></summary><div class="service-body"><span class="service-audience">Niños y adultos</span><p class="service-description">Atención respiratoria en casa, con un trato cercano para niños, adultos y sus familias. Adaptamos la terapia a la evaluación y a la indicación médica cuando corresponda.</p><a class="text-link" data-whatsapp data-service="kinesiología Respiratoria" href="https://wa.me/56933965202?text=Hola%2C%20me%20gustar%C3%ADa%20consultar%20por%20kinesiolog%C3%ADa%20respiratoria%20a%20domicilio.%20La%20comuna%20es%3A%20____.">Consultar por esta atención <span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span></a><img data-media="respiratory" class="service-image" src="./public/images/respiratoria-en-casa.webp" alt="Escena ilustrativa de una profesional atendiendo a un niño junto a su madre en casa." width="1536" height="1024" loading="lazy" /></div></details><details class="service-item" id="traumatologica" name="specialty" ><summary><span class="service-title">Traumatológica</span><span class="service-toggle" aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg></span></summary><div class="service-body"><span class="service-audience">Lesiones y postoperatorios</span><p class="service-description">Rehabilitación después de una lesión o cirugía, y atención musculoesquelética. Trabajamos la movilidad y la función con objetivos definidos según tu evaluación e indicación médica.</p><a class="text-link" data-whatsapp data-service="kinesiología Traumatológica" href="https://wa.me/56933965202?text=Hola%2C%20me%20gustar%C3%ADa%20consultar%20por%20kinesiolog%C3%ADa%20traumatol%C3%B3gica%20a%20domicilio.%20La%20comuna%20es%3A%20____.">Consultar por esta atención <span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span></a><img data-media="hero" class="service-image" src="./public/images/cuidado-en-casa.webp" alt="Escena ilustrativa de un ejercicio de movilidad acompañado en el hogar." width="1536" height="1024" loading="lazy" /></div></details><details class="service-item" id="neurologica" name="specialty" ><summary><span class="service-title">Neurológica</span><span class="service-toggle" aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg></span></summary><div class="service-body"><span class="service-audience">Movimiento y autonomía</span><p class="service-description">Acompañamos a personas con condiciones neurológicas y a sus familias. La atención se enfoca en la movilidad, el equilibrio y las actividades cotidianas, según cada evaluación.</p><a class="text-link" data-whatsapp data-service="kinesiología Neurológica" href="https://wa.me/56933965202?text=Hola%2C%20me%20gustar%C3%ADa%20consultar%20por%20kinesiolog%C3%ADa%20neurol%C3%B3gica%20a%20domicilio.%20La%20comuna%20es%3A%20____.">Consultar por esta atención <span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span></a><img data-media="life" class="service-image" src="./public/images/vida-cotidiana.webp" alt="Escena ilustrativa de una persona mayor caminando acompañada en el jardín de su hogar." width="1536" height="1024" loading="lazy" /></div></details><!-- /render:service-list --></div>
-      </section>
+    <section class="voices chapter" id="testimonios" aria-labelledby="voices-title">
+      <div class="frame voices-layout">
+        <div class="voices-intro">
+          <h2 id="voices-title">Lo que opinan<br>los pacientes de<br><span class="voices-title-accent">Kineplanet.</span></h2>
+          <div class="voices-rating">
+            <strong class="voices-score">5.0</strong>
+            <div>
+              <span class="voices-stars" aria-hidden="true">★★★★★</span>
+              <p>(77 opiniones)</p>
+            </div>
+          </div>
+        </div>
+        <div class="voices-gallery">
+          <div class="voices-columns" role="region" aria-label="Reseñas destacadas" tabindex="0">
+            <div class="voices-column voices-column-blue">
+              <div class="voices-track">
+                <div class="voices-group">
+                  <article class="voices-card voices-desktop"><p>Excelente experiencia. La kine Dani Rosales, fue muy profesional, amable y dedicada durante toda la atención. Me explicó todo con claridad, transmitió confianza y se preocupó por mi bienestar en todo momento. La recomiendo totalmente por su calidad humana y profesionalismo. ¡Muchas gracias por la atención!</p><h3>hidalcys jimenez</h3></article>
+                  <article class="voices-card voices-desktop"><p>Estoy muy agradecida de la terapia, Nicolas Lagos atendió a mi hijo por un cuadro de bronquitis y mejoró rápidamente gracias a él. El profesional fue muy atento y amable en explicarnos todo el proceso y atender a mi hijo con cariño. Totalmente recomendable, es una atención de excelente calidad, gracias!</p><h3>barbara stuardo</h3></article>
+                  <article class="voices-card voices-desktop"><p>Estoy muy satisfecha por la atencion ,  profesionalismo, paciencia de Cristian quien atendio a mi mama en  la primera etapa de recuperacion luego de su protesis de cadera. Pude ver el progreso  despues de cada sesion. Excelente y 100 % recomendado. Gracias.</p><h3>Elier Cartes</h3></article>
+                  <article class="voices-card"><p>Pude realizar mi rehabilitación de forma cómoda y efectiva. La atención fue excelente, y el proceso de reintegros resultó muy sencillo.</p><h3>Fran Alba</h3></article>
+                  <article class="voices-card voices-mobile"><p>La coordinación es rápida y el profesional fue muy amable, atento y responsable con las sesiones.</p><h3>andrea ferreira</h3></article>
+                  <article class="voices-card voices-mobile"><p>Matias atendió a mi hija por una lesión en la rodilla. Muy respetuoso y cordial.</p><h3>Augusto Carrasco</h3></article>
+                  <article class="voices-card voices-mobile"><p>Maravillosa atención, el kine muy atento y me iba explicando para qué los ejercicios y que íbamos progresando super bien. Super recimendado</p><h3>Inge Eichhorns</h3></article>
+                </div>
+              </div>
+            </div>
+            <div class="voices-column voices-column-green">
+              <div class="voices-track">
+                <div class="voices-group">
+                  <article class="voices-card voices-desktop"><p>Excelente atención, muy amables para coordinar tratamiento y con mucha paciencia para atender a adulto mayor. Un agrado haber encontrado esta empresa seria y con profesionales integrales. Kinesiologo Hector Rojas, espectacular, atendió a mi madre a domicilio durante 1 mes con muy buenos resultados.</p><h3>Ignacio Rodriguez</h3></article>
+                  <article class="voices-card voices-desktop"><p>Muy buena atención! Mi bebé le tiene miedo a las atenciones médicas por experiencias un poco traumatizantes para ella, pero el kinesiologo Fernando un 100, se ganó su confianza y mi bebé lo pasó bien en la terapia respiratoria, excelente profesional ♥️</p><h3>constanza saldivar</h3></article>
+                  <article class="voices-card voices-desktop"><p>Hacer mi tratamiento de kinesiologia a domicilio fue lo más acertado ;  fui atendida por Hector excelente profesional. Nunca me imagine que a los 2 meses de mi cirugía de tobillo estaría caminando sin problemas. Gracias</p><h3>Violeta Cordero Schneider</h3></article>
+                  <article class="voices-card voices-desktop"><p>Muy buena experiencia y recomendable. Nicolas Lagos, mi Kinesiologo, muy profesional, me ayudó muchísimo en mi recuperación, explica de forma muy clara y didáctica el proceso de recuperación y la importancia de los ejercicios.</p><h3>Catalina Reyes</h3></article>
+                  <article class="voices-card voices-mobile"><p>Excelente experiencia tuvimos con mi hija de 6 años, Muy preocupado el kinesiologo Jean Salvo en que ella se sintiera cómoda y segura.</p><h3>Daniela Garro</h3></article>
+                  <article class="voices-card voices-mobile"><p>Estimados, Kineplanet, muy agradecidos por la atención y asistencia a nuestra madre Mercedes, de 95 años de edad.</p><h3>Eliana P. Castillo</h3></article>
+                  <article class="voices-card voices-mobile"><p>Kine Mauricio un 7. Pensé que seria una experiencia traumática para mi hijo, pero fue todo lo contrario. Muy profesional.</p><h3>Natalia Bustamante Verdejo</h3></article>
+                  <article class="voices-card voices-mobile"><p>Súper profesional la kine que nos toco llamada Vanessa, siempre puntual y demasiado amorosa con mi bebé… muy clara y amable con la info que nos dió.</p><h3>Cintia Montupil</h3></article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-</section>
+    <section class="home-scroll" id="vida-en-casa" aria-labelledby="home-title">
+      <div class="home-scroll-stage">
+        <div class="frame home-scroll-copy">
+          <h2 id="home-title"><span>Cuidamos tu movimiento.</span> <span>Acompañamos tu vida.</span></h2>
+        </div>
+        <div class="home-scroll-media" tabindex="0" role="region" aria-label="Galería de atención en casa">
+          <figure class="home-scroll-photo"><img src="./public/images/carrusel-respiratoria.webp" alt="Escena ilustrativa de un ejercicio de respiración guiado con un niño y su madre." width="1600" height="900" loading="lazy"></figure>
+          <figure class="home-scroll-photo"><img src="./public/images/carrusel-movilidad.webp" alt="Escena ilustrativa de una kinesióloga acompañando a una mujer que se levanta de una silla." width="1600" height="900" loading="lazy"></figure>
+          <figure class="home-scroll-photo"><img src="./public/images/carrusel-cotidiana.webp" alt="Escena ilustrativa de un hombre mayor caminando junto a su hija en el jardín." width="1600" height="900" loading="lazy"></figure>
+          <figure class="home-scroll-photo"><img src="./public/images/carrusel-familia.webp" alt="Escena ilustrativa de una conversación sobre movilidad de rodilla en casa con un familiar." width="1600" height="900" loading="lazy"></figure>
+        </div>
+      </div>
+    </section>
 
-<section class="process-group" id="proceso" data-home-section="proceso" aria-labelledby="process-title"><section class="process process-timeline-section section-pad" id="tu-atencion" aria-labelledby="process-title"><header class="section-heading"><h2 id="process-title">El primer paso, lo damos contigo<span class="heading-dot">.</span></h2></header><div class="process-timeline"><div class="timeline-rail" aria-hidden="true"></div><div class="timeline-fill" aria-hidden="true"></div><ol class="process-steps" id="process-steps"><!-- render:process-steps --><li class="process-step timeline-step"><span class="timeline-node" aria-hidden="true"><span class="timeline-node-surface"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 4h10a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4h-6l-6 3v-4a4 4 0 0 1-2-3V8a4 4 0 0 1 4-4Zm1 5h8m-8 4h5"/></svg></span></span><article class="timeline-card"><div class="timeline-card-copy"><h3>Te escuchamos.</h3><p>Cuéntanos por WhatsApp qué atención necesitas y en qué comuna. Puedes escribir por ti o por un familiar.</p></div><div class="timeline-card-media"><img data-media="respiratory" src="./public/images/respiratoria-en-casa.webp" alt="Escena ilustrativa de atención en casa a un niño junto a su madre." width="1536" height="1024" loading="lazy"/></div></article></li><li class="process-step timeline-step"><span class="timeline-node" aria-hidden="true"><span class="timeline-node-surface"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 3v4m10-4v4M4 10h16M6 5h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Zm2 10 3 3 5-5"/></svg></span></span><article class="timeline-card"><div class="timeline-card-copy"><h3>Lo coordinamos contigo.</h3><p>Confirmamos cobertura, disponibilidad, valor y requisitos. Asignamos al profesional considerando tu necesidad y ubicación.</p></div><div class="timeline-card-media"><img data-media="team" src="./public/images/equipo-ilustrativo.webp" alt="Retratos ilustrativos; no identifican a profesionales reales." width="1536" height="1024" loading="lazy"/></div></article></li><li class="process-step timeline-step"><span class="timeline-node" aria-hidden="true"><span class="timeline-node-surface"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m3 11 9-8 9 8M5 10v11h14V10M9 21v-7h6v7"/></svg></span></span><article class="timeline-card"><div class="timeline-card-copy"><h3>Nos conocemos en casa.</h3><p>En la primera visita, el kinesiólogo evalúa tu situación y escucha tus objetivos, considerando la indicación médica cuando corresponde.</p></div><div class="timeline-card-media"><img data-media="care" src="./public/images/atencion-familiar-en-casa.webp" alt="Escena ilustrativa de una evaluación de movilidad junto a la familia, en casa." width="1536" height="1024" loading="lazy"/></div></article></li><li class="process-step timeline-step"><span class="timeline-node" aria-hidden="true"><span class="timeline-node-surface"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-3M9 2h6v5H9Zm0 11h6m-6 4h4"/></svg></span></span><article class="timeline-card"><div class="timeline-card-copy"><h3>Trazamos tu plan.</h3><p>Definimos una atención personalizada y te explicamos cómo acompañar el proceso. Los objetivos se ajustan a tu condición y evolución.</p></div><div class="timeline-card-media"><img data-media="hero" src="./public/images/cuidado-en-casa.webp" alt="Escena ilustrativa de un ejercicio de movilidad acompañado en el hogar." width="1536" height="1024" loading="lazy"/></div></article></li><!-- /render:process-steps --></ol></div></section></section>
+    <section class="services chapter" id="servicios" aria-labelledby="services-title">
+      <div class="frame service-layout">
+        <header class="service-heading"><h2 id="services-title">Kinesiología en casa, desde la infancia hasta la vejez.</h2></header>
+        <div class="service-tabs" role="tablist" aria-label="Atenciones a domicilio" hidden>
+          <button type="button" id="tab-respiratoria" role="tab" aria-controls="panel-respiratoria" aria-selected="true">Respiratoria</button>
+          <button type="button" id="tab-traumatologica" role="tab" aria-controls="panel-traumatologica" aria-selected="false" tabindex="-1">Traumatológica</button>
+          <button type="button" id="tab-neurologica" role="tab" aria-controls="panel-neurologica" aria-selected="false" tabindex="-1">Neurológica</button>
+          <button type="button" id="tab-adulto-mayor" role="tab" aria-controls="panel-adulto-mayor" aria-selected="false" tabindex="-1">Adulto mayor</button>
+          <button type="button" id="tab-estimulacion" role="tab" aria-controls="panel-estimulacion" aria-selected="false" tabindex="-1">Estimulación temprana</button>
+          <button type="button" id="tab-masajes" role="tab" aria-controls="panel-masajes" aria-selected="false" tabindex="-1">Masajes</button>
+        </div>
+        <div class="service-panels">
+          <article class="service-panel" id="panel-respiratoria">
+            <figure class="service-visual">
+              <img src="./public/images/respiratoria-en-casa.webp" alt="Escena ilustrativa de una atención respiratoria con un niño y su madre." width="1536" height="1024" loading="lazy">
+            </figure>
+            <div class="service-panel-copy">
+              <h3>Respiratoria</h3>
+              <p>Atención en casa para niños y adultos con afecciones respiratorias. Adaptamos la sesión a la evaluación y a la indicación médica cuando corresponde.</p>
+              <a class="action" href="https://wa.me/56933965202?text=Hola%2C%20quiero%20consultar%20por%20kinesiolog%C3%ADa%20respiratoria%20a%20domicilio.">Consultar por WhatsApp <svg aria-hidden="true"><use href="#diagonal"/></svg></a>
+            </div>
+          </article>
+          <article class="service-panel" id="panel-traumatologica">
+            <figure class="service-visual">
+              <img src="./public/images/atencion-familiar-en-casa.webp" alt="Escena ilustrativa de una evaluación de movilidad de rodilla en casa." width="1536" height="1024" loading="lazy">
+            </figure>
+            <div class="service-panel-copy">
+              <h3>Traumatológica y musculoesquelética</h3>
+              <p>Trabajamos la movilidad y la función después de una lesión o cirugía, o cuando el dolor muscular, articular o de columna dificulta tus actividades.</p>
+              <a class="action" href="https://wa.me/56933965202?text=Hola%2C%20quiero%20consultar%20por%20kinesiolog%C3%ADa%20traumatol%C3%B3gica%20a%20domicilio.">Consultar por WhatsApp <svg aria-hidden="true"><use href="#diagonal"/></svg></a>
+            </div>
+          </article>
+          <article class="service-panel" id="panel-neurologica">
+            <figure class="service-visual">
+              <img src="./public/images/cuidado-en-casa.webp" alt="Escena ilustrativa de una kinesióloga apoyando un ejercicio de movilidad en casa." width="1536" height="1024" loading="lazy">
+            </figure>
+            <div class="service-panel-copy">
+              <h3>Neurológica</h3>
+              <p>Trabajamos la marcha y el equilibrio para facilitar las actividades cotidianas de personas con Parkinson, secuelas de un accidente cerebrovascular u otras condiciones neurológicas.</p>
+              <a class="action" href="https://wa.me/56933965202?text=Hola%2C%20quiero%20consultar%20por%20kinesiolog%C3%ADa%20neurol%C3%B3gica%20a%20domicilio.">Consultar por WhatsApp <svg aria-hidden="true"><use href="#diagonal"/></svg></a>
+            </div>
+          </article>
+          <article class="service-panel" id="panel-adulto-mayor"><figure class="service-visual"><img src="./public/images/vida-cotidiana.webp" alt="Escena ilustrativa de un paseo acompañado en casa." width="1536" height="1024" loading="lazy"></figure><div class="service-panel-copy"><h3>Adulto mayor</h3>
+            <p>Ejercicios de fuerza, equilibrio y marcha para conservar autonomía y reducir el riesgo de caídas en casa.</p>
+            <a class="action" href="https://wa.me/56933965202?text=Hola%2C%20quiero%20consultar%20por%20kinesiolog%C3%ADa%20del%20adulto%20mayor%20a%20domicilio.">Consultar por WhatsApp <svg aria-hidden="true"><use href="#diagonal"/></svg></a></div></article>
+          <article class="service-panel" id="panel-estimulacion"><figure class="service-visual service-visual-room"><img src="./public/images/luz-kineplanet.webp" alt="" width="1536" height="1024" loading="lazy"></figure><div class="service-panel-copy"><h3>Estimulación temprana</h3>
+            <p>Actividades adaptadas a la etapa de desarrollo motor de lactantes y niños pequeños, con orientación para padres y cuidadores.</p>
+            <a class="action" href="https://wa.me/56933965202?text=Hola%2C%20quiero%20consultar%20por%20estimulaci%C3%B3n%20temprana%20a%20domicilio.">Consultar por WhatsApp <svg aria-hidden="true"><use href="#diagonal"/></svg></a></div></article>
+          <article class="service-panel" id="panel-masajes"><figure class="service-visual"><img src="./public/images/fondo-equipo-kineplanet.webp" alt="Un espacio de atención preparado en casa." width="1672" height="941" loading="lazy"></figure><div class="service-panel-copy"><h3>Masajes</h3>
+            <p>Masajes de relajación y descontracturantes a domicilio para aliviar la tensión muscular.</p>
+            <a class="action" href="https://wa.me/56933965202?text=Hola%2C%20quiero%20consultar%20por%20masajes%20a%20domicilio.">Consultar por WhatsApp <svg aria-hidden="true"><use href="#diagonal"/></svg></a></div></article>
+        </div>
+      </div>
+    </section>
 
-<section data-home-section="precios" class="evaluation-group" id="cobertura" aria-labelledby="practical-title">
-<section class="evaluation" id="agenda-tu-evaluacion" aria-labelledby="practical-title">
- <header class="section-heading"><h2 id="practical-title">Agenda tu evaluación<span class="heading-dot">.</span></h2></header>
- <div class="evaluation-layout">
-  <div class="evaluation-card evaluation-card-light">
-   
-   <ol class="evaluation-checklist"><li>Escríbenos por WhatsApp</li><li>Confirmamos comuna y horario</li><li>Coordinamos tu primera visita</li></ol>
-  </div>
-  <figure class="evaluation-visit">
-   <picture><source data-media="hero" media="(max-width: 900px)" srcset="./public/images/cuidado-en-casa.webp" /><img data-media="heroMobile" src="./public/images/cuidado-en-casa-movil.webp" alt="Escena ilustrativa de una kinesióloga acompañando un ejercicio de movilidad en el hogar de una persona mayor." width="1024" height="1536" loading="lazy" /></picture>
-   <figcaption>Atención en tu hogar · Imagen ilustrativa</figcaption>
-  </figure>
-  <div class="evaluation-card evaluation-card-dark">
-   <h3>Tu atención,<br /> en casa.</h3>
-   <p class="price" id="reference-price">$30.000</p>
-   <p class="evaluation-price-label">CLP · Valor de referencia por sesión</p>
-   <a class="evaluation-cta" data-whatsapp data-service="una evaluación de kinesiología" href="https://wa.me/56933965202?text=Hola%2C%20me%20gustar%C3%ADa%20consultar%20por%20una%20evaluaci%C3%B3n%20de%20kinesiolog%C3%ADa%20a%20domicilio.%20La%20comuna%20es%3A%20____.">Agendar mi evaluación <span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span></a>
-   <p class="evaluation-note">Confirmamos cobertura, disponibilidad y valor antes de coordinar tu atención.</p>
-  </div>
- </div>
-</section>
+    <section class="visit process process-timeline-section" id="proceso" aria-labelledby="visit-title">
+      <div class="frame">
+        <header class="visit-heading"><h2 id="visit-title">De la primera conversación a un plan de recuperación en casa</h2></header>
+        <div class="process-timeline"><div class="timeline-rail" aria-hidden="true"></div><div class="timeline-fill" aria-hidden="true"></div><ol class="process-steps" id="process-steps">
+          <li class="process-step timeline-step"><span class="timeline-node" aria-hidden="true"><span class="timeline-node-surface"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 4h10a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4h-6l-6 3v-4a4 4 0 0 1-2-3V8a4 4 0 0 1 4-4Zm1 5h8m-8 4h5"/></svg></span></span><article class="timeline-card"><div class="timeline-card-copy"><h3>Te escuchamos.</h3><p>Cuéntanos por WhatsApp qué atención necesitas y en qué comuna. Puedes escribir por ti o por un familiar.</p></div><div class="timeline-card-media"><img data-media="respiratory" src="./public/images/respiratoria-en-casa.webp" alt="Escena ilustrativa de atención en casa a un niño junto a su madre." width="1536" height="1024" loading="lazy"/></div></article></li>
+          <li class="process-step timeline-step"><span class="timeline-node" aria-hidden="true"><span class="timeline-node-surface"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 3v4m10-4v4M4 10h16M6 5h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Zm2 10 3 3 5-5"/></svg></span></span><article class="timeline-card"><div class="timeline-card-copy"><h3>Lo coordinamos contigo.</h3><p>Confirmamos cobertura, disponibilidad, valor y requisitos. Asignamos al profesional considerando tu necesidad y ubicación.</p></div><div class="timeline-card-media"><img data-media="team" src="./public/images/equipo-ilustrativo.webp" alt="Retratos ilustrativos; no identifican a profesionales reales." width="1536" height="1024" loading="lazy"/></div></article></li>
+          <li class="process-step timeline-step"><span class="timeline-node" aria-hidden="true"><span class="timeline-node-surface"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m3 11 9-8 9 8M5 10v11h14V10M9 21v-7h6v7"/></svg></span></span><article class="timeline-card"><div class="timeline-card-copy"><h3>Nos conocemos en casa.</h3><p>En la primera visita, el kinesiólogo evalúa tu situación y escucha tus objetivos, considerando la indicación médica cuando corresponde.</p></div><div class="timeline-card-media"><img data-media="care" src="./public/images/atencion-familiar-en-casa.webp" alt="Escena ilustrativa de una evaluación de movilidad junto a la familia, en casa." width="1536" height="1024" loading="lazy"/></div></article></li>
+          <li class="process-step timeline-step"><span class="timeline-node" aria-hidden="true"><span class="timeline-node-surface"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-3M9 2h6v5H9Zm0 11h6m-6 4h4"/></svg></span></span><article class="timeline-card"><div class="timeline-card-copy"><h3>Trazamos tu plan.</h3><p>Definimos una atención personalizada y te explicamos cómo acompañar el proceso. Los objetivos se ajustan a tu condición y evolución.</p></div><div class="timeline-card-media"><img data-media="hero" src="./public/images/cuidado-en-casa.webp" alt="Escena ilustrativa de un ejercicio de movilidad acompañado en el hogar." width="1536" height="1024" loading="lazy"/></div></article></li></ol></div>
+      </div>
+    </section>
 
+    <section class="booking chapter" id="evaluacion" aria-labelledby="booking-title">
+      <div class="frame">
+        <h2 id="booking-title" data-reveal>Agenda tu primera<br>sesión de evaluación</h2>
+        <ol class="booking-steps" aria-label="Qué incluye la evaluación" data-reveal>
+          <li><h3><span aria-hidden="true">01 · </span>Conversación</h3><p>Nos cuentas qué cambió, cuándo empezaron las molestias y qué te gustaría volver a hacer.</p></li>
+          <li><h3><span aria-hidden="true">02 · </span>Evaluación</h3><p>Observamos cómo te mueves en casa y revisamos tu movilidad, fuerza o equilibrio según el motivo de consulta.</p></li>
+          <li><h3><span aria-hidden="true">03 · </span>Objetivos</h3><p>Elegimos contigo qué trabajar primero, desde levantarte de una silla hasta volver a caminar con más confianza.</p></li>
+          <li><h3><span aria-hidden="true">04 · </span>Plan</h3><p>Te explicamos con qué empezar en casa y cómo iremos revisando tus avances.</p></li>
+        </ol>
+        <div class="booking-cta" data-reveal>
+          <a class="action" href="https://wa.me/56933965202?text=Hola%2C%20quiero%20coordinar%20una%20evaluaci%C3%B3n%20de%20kinesiolog%C3%ADa%20a%20domicilio.">Agendar Evaluación <svg aria-hidden="true"><use href="#right"/></svg></a>
+        </div>
+      </div>
+    </section>
 
-</section>
+    <section class="questions chapter" id="preguntas" aria-labelledby="questions-title">
+      <div class="frame editorial-layout">
+        <h2 id="questions-title" data-reveal>Lo que necesitas saber <span class="title-accent-on-blue">antes de tu primera visita</span></h2>
+        <div class="question-list" data-reveal>
+          <details open>
+            <summary>¿Qué beneficios tiene la kinesiología a domicilio? <svg aria-hidden="true"><use href="#plus"/></svg></summary>
+            <p>Recibes atención en tu casa y ahorras tiempo y gastos de traslado. Esto puede ser especialmente práctico si tienes movilidad reducida o dificultades para salir.</p>
+            <p>El kinesiólogo trabaja contigo de forma individual y adapta el plan a tus necesidades y a las actividades que haces en tu propio entorno.</p>
+          </details>
+          <details>
+            <summary>¿Qué esperar de una sesión de kinesiología a domicilio? <svg aria-hidden="true"><use href="#plus"/></svg></summary>
+            <p>La primera sesión comienza con una evaluación. A partir de ella, el kinesiólogo diseña contigo un plan de tratamiento según tus necesidades.</p>
+            <p>Según la evaluación, la sesión puede incluir ejercicios de movilidad o fortalecimiento, terapia manual o electroterapia. También puedes recibir ejercicios para practicar entre visitas.</p>
+          </details>
+          <details>
+            <summary>¿Cuánto dura una sesión de kinesiología a domicilio? <svg aria-hidden="true"><use href="#plus"/></svg></summary>
+            <p>La atención respiratoria dura aproximadamente 40 minutos, tanto en niños como en adultos. Las demás terapias suelen durar unos 50 minutos. La primera sesión puede ser más larga porque incluye la evaluación inicial.</p>
+          </details>
+          <details>
+            <summary>¿Qué terapias se pueden realizar a domicilio? <svg aria-hidden="true"><use href="#plus"/></svg></summary>
+            <p>Realizamos kinesiología respiratoria para niños y adultos, traumatológica, neurológica y del adulto mayor. También ofrecemos estimulación temprana, atención después de cirugía estética y masoterapia.</p>
+          </details>
+          <details>
+            <summary>¿Cuál es la zona de cobertura? <svg aria-hidden="true"><use href="#plus"/></svg></summary>
+            <p>Atendemos en la Región Metropolitana. Indícanos tu comuna para confirmar la cobertura y disponibilidad.</p>
+          </details>
+          <details>
+            <summary>¿Cuáles son los horarios de atención? <svg aria-hidden="true"><use href="#plus"/></svg></summary>
+            <p>Lunes a viernes de 8:00 a 20:00. Sábados y domingos de 9:00 a 20:00.</p>
+          </details>
+          <details>
+            <summary>¿Qué formas de pago aceptan? <svg aria-hidden="true"><use href="#plus"/></svg></summary>
+            <p>Efectivo, transferencia bancaria y tarjetas de crédito o débito a través de Webpay.</p>
+          </details>
+        </div>
+      </div>
+    </section>
 
-<section data-home-section="preguntas" class="faq section-pad" id="preguntas" aria-labelledby="faq-title"><header class="section-heading"><h2 id="faq-title">Es natural tener preguntas<span class="heading-dot">.</span></h2></header><div class="faq-list" id="faq-list"><!-- render:faq-list --><details class="faq-item" name="faq" open><summary>¿Atienden en mi comuna?<span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>Realizamos atención a domicilio en Santiago. Escríbenos tu comuna por WhatsApp para confirmar cobertura y disponibilidad antes de coordinar una visita.</p></details><details class="faq-item" name="faq" ><summary>¿Cuál es el valor de una sesión?<span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>El valor de referencia es $30.000 CLP por sesión. El valor definitivo, los descuentos y las condiciones aplicables se confirman antes de coordinar tu atención.</p></details><details class="faq-item" name="faq" ><summary>¿Necesito una orden médica?<span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>Depende del motivo de consulta. Para atención por dolor agudo o rehabilitación postoperatoria se requiere orden médica. Al consultar, te orientamos sobre los requisitos de tu atención y la documentación que corresponda.</p></details><details class="faq-item" name="faq" ><summary>¿Cuánto dura una sesión?<span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>Como referencia, la atención respiratoria dura aproximadamente 40 minutos y las demás terapias, unos 50 minutos. La primera sesión puede ser más extensa porque incluye la evaluación inicial. La duración se confirma según la atención requerida.</p></details><details class="faq-item" name="faq" ><summary>¿Cómo se coordina la atención?<span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>Escríbenos por WhatsApp indicando tu comuna y qué necesitas. Revisamos la disponibilidad y coordinamos al profesional, el horario, el valor y los requisitos contigo o con el familiar que organiza la atención.</p></details><details class="faq-item" name="faq" ><summary>¿Qué formas de pago aceptan?<span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>Puedes pagar en efectivo, por transferencia o mediante Webpay con tarjeta de crédito o débito. Confirmamos contigo el medio de pago y sus condiciones al coordinar.</p></details><!-- /render:faq-list --></div></section>
+    <section class="journal chapter" id="blog" aria-labelledby="journal-title" hidden>
+      <div class="frame">
+        <h2 id="journal-title" data-reveal>Guías para preparar tu atención en casa.</h2>
+        <div class="journal-layout">
+          <details class="journal-feature" data-reveal open>
+            <summary>
+              <img src="./public/images/proceso-escena-1.webp" alt="" width="512" height="768" loading="lazy">
+              <span><span class="journal-title">Qué contar al pedir una visita por WhatsApp</span><svg aria-hidden="true"><use href="#plus"/></svg></span>
+            </summary>
+            <p>Indícanos tu comuna y el motivo de la consulta. Si escribes por un familiar, cuéntanos para quién es la atención y quién se encargará de coordinar.</p>
+            <p>Con esos datos revisamos la cobertura, el horario, los requisitos y el valor antes de programar una visita.</p>
+          </details>
+          <div class="journal-list" data-reveal>
+            <details>
+              <summary><img src="./public/images/cuidado-en-casa.webp" alt="" width="1536" height="1024" loading="lazy"><span class="journal-title">Qué pasa en la primera visita</span><svg aria-hidden="true"><use href="#plus"/></svg></summary>
+              <p>En la primera visita conversamos sobre las actividades que te gustaría recuperar o hacer con más comodidad. La evaluación sirve para definir el plan y acordar cómo revisarlo.</p>
+            </details>
+            <details>
+              <summary><img src="./public/images/vida-cotidiana.webp" alt="" width="1536" height="1024" loading="lazy"><span class="journal-title">Cómo coordinar una visita para un familiar</span><svg aria-hidden="true"><use href="#plus"/></svg></summary>
+              <p>Antes de la visita puedes preguntar por el profesional, el horario y los requisitos. Si habrá familiares o cuidadores presentes, también pueden plantear sus dudas.</p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<section class="blog-comparison" id="blog" data-home-section="blog" aria-label="Blog">
- <section class="blog blog-eleven section-pad" id="blog-11" aria-labelledby="blog-title-11">
-  <header class="section-heading"><h2 id="blog-title-11">En nuestro blog<span class="heading-dot">.</span></h2></header>
-  <div class="blog-feature-layout">
-   <details class="blog-article" id="guia-consulta-whatsapp"><summary><span class="blog-media"><img data-media="care" class="blog-cover" src="./public/images/atencion-familiar-en-casa.webp" alt="" width="1536" height="1024" loading="lazy" /></span><div class="blog-card-copy"><h3>Qué contarnos por WhatsApp.</h3><p class="blog-excerpt">Los datos que ayudan a coordinar una atención para ti o para alguien de tu familia.</p></div><span class="blog-cover-arrow" aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="blog-body"><p>Parte por tu comuna y el motivo de consulta. Puedes indicarnos si buscas atención respiratoria, rehabilitación después de una lesión o cirugía, acompañamiento neurológico u otro servicio.</p><p>Si escribes por un familiar, cuéntanos para quién es la atención y quién estará a cargo de coordinar. Revisamos contigo la cobertura, la disponibilidad, el valor y los requisitos antes de acordar una visita.</p><a class="text-link" data-whatsapp href="https://wa.me/56933965202?text=Hola%2C%20me%20gustar%C3%ADa%20consultar%20por%20una%20atenci%C3%B3n%20de%20kinesiolog%C3%ADa%20a%20domicilio.%20La%20comuna%20es%3A%20____%20y%20la%20atenci%C3%B3n%20que%20necesito%20es%3A%20____.">Consultar mi atención <span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span></a></div></details>
-   <div class="blog-side-list"><details class="blog-article" id="guia-primera-visita"><summary><span class="blog-media"><img data-media="hero" class="blog-cover" src="./public/images/cuidado-en-casa.webp" alt="" width="1536" height="1024" loading="lazy" /></span><div class="blog-card-copy"><h3>Primero, nos conocemos.</h3><p class="blog-excerpt">La evaluación inicial es el punto de partida para conversar sobre tus objetivos.</p></div><span class="blog-cover-arrow" aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="blog-body"><p>En la primera visita, el profesional evalúa tu situación y escucha qué actividades quieres trabajar. También considera la indicación médica cuando corresponde.</p><p>El plan se define a partir de esa evaluación. Puedes aprovechar el encuentro para preguntar por los objetivos, la duración de las sesiones y cómo se irá revisando el proceso. Cada atención se adapta a tu condición y evolución.</p><a class="text-link" data-whatsapp href="https://wa.me/56933965202?text=Hola%2C%20me%20gustar%C3%ADa%20consultar%20por%20una%20atenci%C3%B3n%20de%20kinesiolog%C3%ADa%20a%20domicilio.%20La%20comuna%20es%3A%20____%20y%20la%20atenci%C3%B3n%20que%20necesito%20es%3A%20____.">Consultar mi atención <span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span></a></div></details>
-<details class="blog-article" id="guia-atencion-familiar"><summary><span class="blog-media"><img data-media="life" class="blog-cover" src="./public/images/vida-cotidiana.webp" alt="" width="1536" height="1024" loading="lazy" /></span><div class="blog-card-copy"><h3>Coordinar para un familiar.</h3><p class="blog-excerpt">Cómo organizar la conversación cuando otra persona necesita la atención.</p></div><span class="blog-cover-arrow" aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="blog-body"><p>Puedes iniciar la consulta por tu madre, padre, hijo u otro familiar. Indica su comuna y qué atención necesita; así podemos orientarte sobre el servicio y revisar disponibilidad.</p><p>Antes de la visita, confirmamos contigo el profesional, el horario, el valor y los requisitos. Si también participan otros familiares o cuidadores, puedes consultar cómo acompañar el proceso y plantear tus dudas al profesional.</p><a class="text-link" data-whatsapp href="https://wa.me/56933965202?text=Hola%2C%20me%20gustar%C3%ADa%20consultar%20por%20una%20atenci%C3%B3n%20de%20kinesiolog%C3%ADa%20a%20domicilio.%20La%20comuna%20es%3A%20____%20y%20la%20atenci%C3%B3n%20que%20necesito%20es%3A%20____.">Consultar mi atención <span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span></a></div></details></div>
-  </div>
- </section>
-</section>
+    <section class="newsletter chapter" id="newsletter" aria-labelledby="newsletter-title">
+      <div class="frame newsletter-layout">
+        <h2 id="newsletter-title">Suscríbete para conocer todas<br>las novedades de Kineplanet</h2>
+        <div class="newsletter-signup">
+          <input type="email" aria-label="Tu correo electrónico" placeholder="Tu correo electrónico" disabled>
+          <button type="button" disabled>Suscribirme</button>
+        </div>
+      </div>
+    </section>
+  </main>
 
-<section class="newsletter section-pad" id="newsletter" data-home-section="newsletter" aria-labelledby="newsletter-title">
- <header class="section-heading"><h2 id="newsletter-title">Seguimos cerca, también por correo<span class="heading-dot">.</span></h2></header>
- <div class="newsletter-form" aria-label="Newsletter: próximamente"><p class="newsletter-status">Próximamente</p><label for="newsletter-email">Tu correo electrónico</label><div class="newsletter-field"><input id="newsletter-email" type="email" autocomplete="email" placeholder="nombre@correo.cl" aria-describedby="newsletter-note" disabled/><button class="button button-dark" type="button" disabled>Suscribirme <span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span></button></div><p class="newsletter-note" id="newsletter-note">Las suscripciones estarán disponibles pronto.</p></div>
-</section>
-</main>
-
-    <footer class="site-footer"><div class="footer-top"><a class="footer-brand" href="#inicio"><img data-media="logo" src="./public/images/kineplanet-logo.png" alt="Kineplanet" width="1080" height="327"/></a><p>Kinesiología en tu hogar.<br /> Cerca de ti, desde 2012.</p><a class="back-top" href="#inicio">Volver arriba <span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 20V4m-6 6 6-6 6 6"/></svg></span></a></div><div class="footer-links"><div><h3>Conversemos</h3><a href="mailto:contacto@kineplanet.cl">contacto@kineplanet.cl</a><a href="tel:+56222788544">+56 2 2278 8544</a><a href="tel:+56933965201">+56 9 3396 5201</a><a href="tel:+56933965202">+56 9 3396 5202</a></div><div><h3>Tu atención</h3><a href="#servicios">Especialidades</a><a href="#tu-atencion">Cómo funciona</a><a href="#cobertura">Cobertura y valores</a><a href="#preguntas">Preguntas frecuentes</a></div><div><h3>Kineplanet</h3><a href="#nosotros">Nuestro equipo</a><a href="#credenciales">Trayectoria</a><a href="#blog">Blog</a><a href="#newsletter">Newsletter</a><a href="#cobertura">Convenios y descuentos</a><a href="https://www.instagram.com/kineplanet_/" target="_blank" rel="noopener noreferrer">Instagram <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a></div><div class="footer-note"><p>Un cuidado cercano,<br /> en el lugar que conoces.</p><span>Santiago, Chile.</span></div></div><div class="footer-bottom"><span>© <span id="copyright-year">2026</span> Kineplanet</span></div></footer>
-    <a class="floating-contact" data-whatsapp href="https://wa.me/56933965202?text=Hola%2C%20me%20gustar%C3%ADa%20consultar%20por%20una%20atenci%C3%B3n%20de%20kinesiolog%C3%ADa%20a%20domicilio.%20La%20comuna%20es%3A%20____%20y%20la%20atenci%C3%B3n%20que%20necesito%20es%3A%20____." aria-label="Consultar a Kineplanet por WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20.5 11.6a8.5 8.5 0 0 1-12.6 7.5L3 20.5l1.4-4.8A8.5 8.5 0 1 1 20.5 11.6Z"/><path d="M8 7.7c.4-.2.8 1.6 1.2 2.1-.5.5-.5.8-.2 1.3a8 8 0 0 0 3 2.7c.5.2.7-.2 1.3-.8.7.2 2 .9 2 1.2 0 1.8-2 2.1-3.5 1.5-2.3-.9-5.3-3.6-5.4-6 0-1.1.8-2.1 1.6-2Z"/></svg><span>Conversemos</span></a>
-    <noscript><div class="noscript-note">Puedes consultar directamente por WhatsApp al <a href="https://wa.me/56933965202">+56 9 3396 5202</a>. Activa JavaScript para explorar las especialidades y preguntas frecuentes interactivas.</div></noscript>
-  </body>
+  <footer class="footer">
+    <div class="frame">
+      <div class="footer-body">
+        <div class="footer-identity">
+          <a class="footer-logo" href="#inicio" aria-label="KinePlanet, inicio">
+            <img src="./public/images/kineplanet-logo.png" alt="" width="1080" height="327" loading="lazy">
+            <img class="footer-wordmark" src="./public/images/kineplanet-logo.png" alt="" width="1080" height="327" loading="lazy">
+          </a>
+        </div>
+        <nav aria-labelledby="footer-links-title">
+          <h2 id="footer-links-title">Enlaces rápidos</h2>
+          <a href="#equipo">Equipo</a><a href="https://www.lascondes.cl/kineplanet/">Convenios</a><a href="#preguntas">Preguntas frecuentes</a>
+        </nav>
+        <nav aria-labelledby="footer-services-title">
+          <h2 id="footer-services-title">Servicios</h2>
+          <a href="#panel-respiratoria">Respiratoria</a><a href="#panel-traumatologica">Traumatológica</a><a href="#panel-neurologica">Neurológica</a><a href="#panel-adulto-mayor">Adulto mayor</a><a href="#panel-estimulacion">Estimulación temprana</a><a href="#panel-masajes">Masajes</a>
+        </nav>
+        <div class="footer-contact" id="contacto">
+          <h2>Contacto</h2>
+          <a class="footer-contact-line" href="mailto:contacto@kineplanet.cl"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg><span>contacto@kineplanet.cl</span></a>
+          <a class="footer-contact-line" href="tel:+56933965202"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3H4a1 1 0 0 0-1 1c0 9.4 7.6 17 17 17a1 1 0 0 0 1-1v-3l-5-2-2 2a13 13 0 0 1-7-7l2-2-2-5Z"/></svg><span>+56 9 3396 5202</span></a>
+          <p class="footer-contact-line"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 10c0 5-7 10-7 10S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2"/></svg><span>Santiago, Chile</span></p>
+          <div class="footer-socials">
+            <a href="https://www.instagram.com/kineplanet_/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg></a>
+            <a href="https://www.facebook.com/kineplanet/" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 KinePlanet</p>
+        <a class="text-action" href="#inicio">Volver arriba <svg aria-hidden="true"><use href="#diagonal"/></svg></a>
+      </div>
+    </div>
+  </footer>
+</body>
 </html>
