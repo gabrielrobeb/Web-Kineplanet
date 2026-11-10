@@ -1,0 +1,52 @@
+:root{--ease-drawer:cubic-bezier(.32,.72,0,1)}
+.hero-content{opacity:1;transform:translateY(0);transition:opacity 650ms var(--ease-out),transform 650ms var(--ease-out)}
+.hero-bottom>p,.hero-actions{opacity:1;transform:translateY(0);transition:opacity 500ms var(--ease-out) 80ms,transform 500ms var(--ease-out) 80ms}
+.hero-actions{transition-delay:140ms}
+@starting-style{.hero-content{opacity:.35;transform:translateY(14px)}.hero-bottom>p,.hero-actions{opacity:.2;transform:translateY(8px)}}
+.mobile-menu{transform-origin:calc(100% - var(--gutter)) 0}
+.process-step p{transition:opacity 180ms var(--ease-out)}
+.process-photo-backdrop{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.process-photo-image{position:relative;z-index:1}
+.dial-value{left:0;top:0;will-change:transform}
+.pain-marker{left:0;will-change:transform}
+.pain-fill{left:20%;width:60%;transform:scaleX(0);transform-origin:100% 50%}
+.team-motion{position:relative;display:block}
+.team-motion .team-panel,.team-motion .team-panel.is-active{position:absolute;inset:0;flex:none;width:100%;height:100%;transition:clip-path 280ms var(--ease-out);outline:none}
+.team-motion .team-panel>img,.team-motion .team-panel:nth-child(n)>img{position:absolute;left:0;top:0;right:auto;max-width:none;object-position:center 14%;transition:transform 280ms var(--ease-out),filter 180ms ease}
+.team-motion .team-panel-copy{left:0;right:auto;transition:transform 280ms var(--ease-out),opacity 120ms ease;transition-delay:0ms;pointer-events:none}
+.team-motion .team-panel.is-active .team-panel-copy{transition:transform 280ms var(--ease-out),opacity 180ms ease;transition-delay:0ms,65ms}
+.team-motion .team-vertical{left:0;right:auto;transition:transform 280ms var(--ease-out),opacity 150ms ease;pointer-events:none}
+.team-motion .team-plus{left:0;right:auto;transition:transform 280ms var(--ease-out);pointer-events:none}
+.team-motion .team-focus-ring{position:absolute;left:0;top:0;border:2px solid white;outline:2px solid var(--brand-blue);outline-offset:-5px;border-radius:12px;z-index:4;opacity:0;pointer-events:none}
+.team-motion .team-panel:focus-visible .team-focus-ring{opacity:1}
+.team-motion.is-setting .team-panel,.team-motion.is-setting .team-panel *{transition:none!important}
+.team-motion .team-panel:not(.is-active) .team-plus{display:none}
+.team-motion .team-panel:after{display:none}
+.team-shade{position:absolute;left:0;top:0;pointer-events:none;background:linear-gradient(0deg,rgba(12,31,42,.82),transparent 60%);transition:transform 280ms var(--ease-out)}
+.button,.round-button,.menu-toggle{transition:transform 140ms var(--ease-out),background-color 180ms ease,color 180ms ease}
+html[data-input=pointer] .button:active,html[data-input=pointer] .round-button:active{transform:scale(.97)}
+html[data-input=pointer] .menu-toggle:active{transform:scale(.98)}
+.service-toggle,.extra-sign,.faq-item summary>span{transition:transform 200ms var(--ease-out),background-color 180ms ease,scale 140ms var(--ease-out)}
+html[data-input=pointer] summary:active .service-toggle,html[data-input=pointer] summary:active .extra-sign,html[data-input=pointer] .faq-item summary:active>span{scale:.94}
+.floating-contact{transition:transform 200ms var(--ease-out),opacity 150ms ease}
+@media(hover:hover) and (pointer:fine){
+ .text-link>span,.button>span{transition:transform 180ms var(--ease-out)}
+ .text-link:hover>span,.button:hover>span{transform:translate(2px,-2px)}
+ .round-button .ui-icon{transition:transform 180ms var(--ease-out)}
+ #review-next:hover .ui-icon{transform:translateX(2px)}
+ #review-prev:hover .ui-icon{transform:translateX(-2px)}
+}
+@media(max-width:600px){
+ .team-motion .team-panel-copy{top:0;bottom:auto}
+ .team-motion .team-vertical{top:0;bottom:auto;writing-mode:horizontal-tb;line-height:1.3}
+ .team-motion .team-plus{top:0;bottom:auto}
+ .team-motion .team-panel-title{white-space:normal}
+ .team-motion .team-panel,.team-motion .team-panel.is-active{height:100%;transition:clip-path 280ms var(--ease-out)}
+}
+html[data-input=keyboard] .button,html[data-input=keyboard] .round-button,html[data-input=keyboard] .menu-toggle,html[data-input=keyboard] .menu-lines:before,html[data-input=keyboard] .menu-lines:after,html[data-input=keyboard] .team-panel,html[data-input=keyboard] .team-panel *,html[data-input=keyboard] summary *,html[data-input=keyboard] .process-step p,html[data-input=keyboard] .hero-content,html[data-input=keyboard] .hero-bottom>p,html[data-input=keyboard] .hero-actions{transition:none!important}
+html[data-input=keyboard] .button:active,html[data-input=keyboard] .round-button:active{transform:none}
+@media(prefers-reduced-motion:reduce){
+ .team-motion .team-panel,.team-motion .team-panel *,.process-step p,.button,.round-button,.menu-toggle,.hero-content,.hero-bottom>p,.hero-actions{transition:none!important}
+ .button:active,.round-button:active,.menu-toggle:active{transform:none!important}
+ .text-link:hover>span,.button:hover>span,.round-button:hover .ui-icon{transform:none!important}
+}

@@ -1,0 +1,22 @@
+const {chromium}=require('playwright');
+const fs=require('node:fs');
+(async()=>{const browser=await chromium.launch({channel:'chrome',headless:true});try{
+ const out='docs/reference-pricing-11';fs.mkdirSync(out,{recursive:true});
+ const page=await browser.newPage({viewport:{width:1440,height:1000}});
+ await page.emulateMedia({colorScheme:'light'});
+ await page.goto('https://pro.reactbits.dev/docs/blocks/pricing/pricing-11',{waitUntil:'domcontentloaded'});
+ await page.getByRole('button',{name:'Toggle theme',exact:true}).click();await page.waitForTimeout(500);
+ const iframe=page.locator('iframe[title="Preview"]');await iframe.waitFor({timeout:30000});await iframe.scrollIntoViewIfNeeded();await page.waitForTimeout(3500);
+ console.log('iframes',await iframe.count(),await iframe.boundingBox());
+ await page.screenshot({path:`${out}/page.jpg`,quality:85});
+ const frame=iframe.contentFrame();
+ console.log('public preview',await frame.locator('body').innerText());
+ const geometry=await frame.locator('h1,h2,h3,p,button,a,img').evaluateAll(els=>els.map(e=>{const r=e.getBoundingClientRect(),s=getComputedStyle(e);return{tag:e.tagName,text:e.innerText,alt:e.alt,src:e.tagName==='IMG'?e.getAttribute('src'):null,rect:{x:r.x,y:r.y,width:r.width,height:r.height},style:{font:s.font,fontFamily:s.fontFamily,color:s.color,background:s.background,borderRadius:s.borderRadius,transform:s.transform}}}));
+ fs.writeFileSync(`${out}/visible-geometry.json`,JSON.stringify(geometry,null,2));
+ await iframe.screenshot({path:`${out}/desktop.jpg`,quality:90});
+ console.log('geometry',JSON.stringify(geometry).slice(0,6500));
+ console.log('theme controls',await page.locator('button[aria-label]').evaluateAll(els=>els.map(e=>e.getAttribute('aria-label'))));
+ console.log('visible surfaces',await frame.locator('h3').evaluateAll(els=>els.map(e=>{const a=e.parentElement,s=getComputedStyle(a);return{text:e.innerText,rect:a.getBoundingClientRect().toJSON(),bg:s.background,borderRadius:s.borderRadius,padding:s.padding}})));
+ await page.setViewportSize({width:428,height:1000});await iframe.scrollIntoViewIfNeeded();await page.waitForTimeout(700);await iframe.screenshot({path:`${out}/mobile.jpg`,quality:90});
+ console.log('mobile',await iframe.boundingBox(),await frame.locator('body').evaluate(e=>({w:e.clientWidth,h:e.scrollHeight})));
+ }finally{await browser.close()}})().catch(e=>{console.error(e);process.exit(1)});

@@ -1,0 +1,12 @@
+{
+  "name": "kineplanet-homepage",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Kinesiología a domicilio en Santiago. Homepage estático, accesible y sin dependencias de producción.",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "build": "node scripts/build.mjs",
+    "preview": "node scripts/serve.mjs dist"
+  }
+}

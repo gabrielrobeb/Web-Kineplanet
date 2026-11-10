@@ -1,0 +1,192 @@
+@font-face {
+  font-family: "Cabinet Grotesk";
+  src: url("../public/fonts/cabinet-bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+
+:root {
+  --font-display: "Cabinet Grotesk", var(--font-text);
+  --heading-space: clamp(34px, 5vw, 64px);
+  --content-inset: max(var(--gutter), calc((100vw - 1440px) / 2));
+}
+
+/* Use the original Team content width throughout the page. */
+html:root main :is(.section-pad, .evaluation) {
+  padding-inline: var(--content-inset);
+}
+html:root :is(.site-header, .site-footer, .life-story .life-stage) {
+  padding-inline: var(--content-inset);
+}
+
+html:root .hero-photographic .hero-content h1,
+html:root main .section-heading h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -.052em;
+  text-transform: uppercase;
+}
+
+html:root main .section-heading h2 {
+  color: var(--blue);
+  max-width: none;
+  margin: 0;
+  font-size: clamp(39px, 5.8vw, 82px);
+  line-height: .99;
+  text-wrap: pretty;
+}
+.section-heading .heading-dot { color: var(--lime); }
+
+main .section-heading {
+  position: relative;
+  z-index: 1;
+  grid-column: 1 / -1;
+  width: 100%;
+  margin: 0 0 var(--heading-space);
+  text-align: left;
+}
+
+html .hero-photographic .hero-content {
+  width: calc(100% - 2 * var(--content-inset));
+  text-align: left;
+}
+html .hero-photographic .hero-stage { grid-template-columns: minmax(0, 1fr); }
+html:root .hero-photographic .hero-content h1 { margin: 0; text-wrap: pretty; }
+html .hero-photographic .hero-actions { justify-content: flex-start; }
+.life-story .life-statement { text-align: left; text-transform: uppercase; }
+@media (min-width: 601px) {
+  html:root .motion-enabled .life-story .life-stage { padding-inline: 0; }
+  html:root .life-story.is-live .life-statement { inset-inline: var(--content-inset); }
+}
+
+.team-about-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 28px;
+  margin-bottom: var(--heading-space);
+}
+.team-about-heading .section-heading { grid-column: auto; margin: 0; }
+.team-stats { display: flex; gap: clamp(18px, 3vw, 48px); margin: 0; }
+.team-stats > div { display: flex; flex-direction: column-reverse; }
+.team-stats dd {
+  margin: 0;
+  color: var(--blue);
+  font: 700 clamp(32px, 4vw, 56px) / 1 var(--font-display);
+}
+.team-stats dt { margin-top: 7px; color: var(--muted); font-size: clamp(12px, 1.3vw, 16px); }
+.team-about .team-panels {
+  display: grid;
+  place-items: center;
+  isolation: isolate;
+  height: auto;
+  overflow: clip;
+  padding-block: 24px 36px;
+  touch-action: pan-y;
+  user-select: none;
+  cursor: grab;
+}
+.team-about .team-panel {
+  grid-area: 1 / 1;
+  width: min(38%, 390px);
+  height: auto;
+  aspect-ratio: 1;
+  border-radius: 16px;
+  background: var(--paper);
+  transition: transform 300ms var(--ease-out);
+}
+.team-about .team-panel img { object-position: center 10%; filter: none; pointer-events: none; }
+.team-about .team-panel::after { content: none; }
+.team-about .team-panel[data-position="left"] { transform: translate(-69%, 8%) rotate(-9deg) scale(.88); }
+.team-about .team-panel[data-position="right"] { transform: translate(69%, 8%) rotate(9deg) scale(.88); }
+.team-about .team-panel[data-position="center"] { z-index: 1; }
+.team-about .team-panels.is-dragging,
+.team-about .team-panels.is-dragging .team-panel { cursor: grabbing; }
+.team-about .team-panels.is-dragging .team-panel { transition: none; }
+.team-about .team-panel:focus-visible { outline: 3px solid var(--brand-blue); outline-offset: 4px; z-index: 2; }
+.team-about .team-selected { max-width: none; margin: 0; text-align: center; color: var(--blue); font-weight: 700; }
+.team-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: min(100%, 390px);
+  margin: 14px auto 0;
+}
+.team-controls[hidden] { display: none; }
+.team-controls button {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--blue);
+}
+.team-controls .ui-icon { width: 18px; height: 18px; }
+.team-scrubber { position: relative; flex: 1; min-width: 0; }
+.team-range {
+  appearance: none;
+  display: block;
+  width: 100%;
+  height: 44px;
+  margin: 0;
+  background: transparent;
+  color: var(--brand-blue);
+  cursor: ew-resize;
+}
+.team-range::-webkit-slider-runnable-track {
+  height: 10px;
+  background: repeating-linear-gradient(90deg, var(--rule) 0 1px, transparent 1px 13px);
+}
+.team-range::-webkit-slider-thumb {
+  appearance: none;
+  width: 6px;
+  height: 16px;
+  margin-top: -3px;
+  border-radius: 3px;
+  background: currentColor;
+}
+.team-range::-moz-range-track {
+  height: 10px;
+  background: repeating-linear-gradient(90deg, var(--rule) 0 1px, transparent 1px 13px);
+}
+.team-range::-moz-range-thumb {
+  width: 6px;
+  height: 16px;
+  border: 0;
+  border-radius: 3px;
+  background: currentColor;
+}
+.team-controls .team-play {
+  position: absolute;
+  inset: 0 auto auto 50%;
+  transform: translateX(-50%);
+  background: var(--blue);
+  color: white;
+}
+.team-play svg { width: 19px; height: 19px; fill: currentColor; }
+.team-play[data-playing="true"] .team-play-icon,
+.team-play:not([data-playing="true"]) .team-pause-icon { display: none; }
+.team-about .team-contact { margin: 18px 0 0; text-align: center; }
+.testimonials .reviews-heading { justify-content: flex-end; margin: 0 0 20px; }
+.specialties { row-gap: 0; }
+.specialties .specialties-intro { padding-top: 0; }
+.credentials-stats .credentials-numbers { margin-top: 0; }
+.process-timeline-section .section-heading { margin-bottom: clamp(70px, 8vw, 115px); }
+main .faq, main .newsletter { grid-template-columns: minmax(0, 1fr); row-gap: 0; }
+main :is(.evaluation-layout, .process-timeline, .credentials-stats .credentials-numbers, .faq .faq-list, .newsletter .newsletter-form) {
+  width: 100%;
+  max-width: none;
+  margin-inline: 0;
+}
+
+@media (max-width: 600px) {
+  .team-about-heading { grid-template-columns: minmax(0, 1fr); }
+  .team-about .team-panel { width: min(70%, 280px); border-radius: 12px; }
+  .life-story .life-statement { white-space: normal; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .team-about .team-panel { transition: none; }
+}
