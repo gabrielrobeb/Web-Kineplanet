@@ -420,7 +420,7 @@ html .visit.process.process-timeline-section {
 .visit > .frame { grid-area: 1 / 1; display: grid; grid-template-columns: minmax(0, .82fr) minmax(0, 1fr); align-items: start; gap: clamp(30px, 5vw, 80px); }
 .visit-heading { position: sticky; top: 0; display: grid; align-items: center; min-height: 100svh; }
 .visit-heading h2 { max-width: 23ch; font: 350 clamp(34px, 4.65vw, 78px)/.97 var(--display); letter-spacing: -.027em; text-transform: none; text-wrap: pretty; }
-.visit .process-timeline { --visit-edge-space: 70svh; width: 100%; margin-top: var(--visit-edge-space); padding-bottom: var(--visit-edge-space); }
+.visit .process-timeline { width: 100%; margin-top: 70svh; padding-bottom: 37svh; }
 .visit.process.process-timeline-section .process-step { display: block; padding: 0 0 clamp(84px, 10.5vw, 156px) 54px; }
 .visit.process.process-timeline-section .process-step:last-child { padding-bottom: 0; }
 .visit .timeline-rail, .visit .timeline-fill, .visit .timeline-node { left: 18px; }
@@ -446,9 +446,9 @@ html .visit.process.process-timeline-section {
 .visit.process.process-timeline-section .process-step p { font-size: clamp(17px, 1.35vw, 20px); }
 @media (max-width: 700px) {
   .visit > .frame { display: block; padding-block: var(--section); }
-  .visit-heading { top: 72px; display: block; min-height: 0; z-index: 4; margin: 0 calc(-1 * var(--edge)) 26px; padding: 12px var(--edge) 19px; background: linear-gradient(var(--deep) 75%, #13344700); }
-  .visit-heading h2 { margin-inline: auto; font-size: clamp(26px, 6.6vw, 42px); text-align: center; }
-  .visit .process-timeline { --visit-edge-space: 0px; }
+  .visit-heading { position: static; display: block; min-height: 0; margin-bottom: 26px; padding-block: 12px 19px; }
+  .visit-heading h2 { margin-inline: auto; font-size: clamp(30px, 8.4vw, 55px); text-align: center; }
+  .visit .process-timeline { margin-top: 0; padding-bottom: 0; }
   .visit .timeline-rail, .visit .timeline-fill, .visit .timeline-node { left: 14px; }
   .visit .timeline-node { width: 36px; }
   .visit .timeline-node-surface { width: 29px; height: 29px; }
