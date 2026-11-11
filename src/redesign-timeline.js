@@ -42,9 +42,9 @@ function initProcessTimeline({reduceMotion}){
   rows.forEach((row,index)=>{
    const metric=metrics[index],visible=metric.bottom>scrollY&&metric.top<scrollY+innerHeight;
    row.classList.toggle('is-in-view',visible);
-   // Scroll supplies the entrance; text never waits hidden for an observer.
-   const entrance=reduced?1:clamp((scrollY+innerHeight*.96-metric.cardTop)/(innerHeight*.46));
-   cards[index].style.transform=reduced?'none':`translate3d(0,${(1-entrance)*16}px,0) scale(${.965+entrance*.035})`;
+   const entrance=reduced?1:clamp((scrollY+innerHeight*.98-metric.cardTop)/(innerHeight*.22));
+   cards[index].style.opacity=String(entrance);
+   cards[index].style.transform=reduced?'none':`translate3d(0,${(1-entrance)*24}px,0)`;
   });
  }
  function schedule(){if(!scheduled){scheduled=true;requestAnimationFrame(update);}}

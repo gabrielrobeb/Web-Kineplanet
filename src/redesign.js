@@ -66,6 +66,7 @@
     for (const element of document.querySelectorAll('.is-entering')) {
       element.classList.remove('is-entering');
     }
+    document.querySelectorAll('.is-reveal-pending').forEach(element => element.classList.remove('is-reveal-pending'));
   }
 
   document.addEventListener('keydown', () => {
@@ -90,49 +91,62 @@
     }
   });
 
-  const serviceTabs = document.querySelector('.service-tabs');
-  if (serviceTabs) {
-    const verticalTabs = matchMedia('(min-width: 1000px)');
-    const updateTabOrientation = () => serviceTabs.setAttribute('aria-orientation', verticalTabs.matches ? 'vertical' : 'horizontal');
-    updateTabOrientation();
-    verticalTabs.addEventListener('change', updateTabOrientation);
-    const tabs = [...serviceTabs.querySelectorAll('[role="tab"]')];
-    const panels = tabs.map(tab => document.getElementById(tab.getAttribute('aria-controls')));
-    function selectService(active, animate) {
-      tabs.forEach((tab, index) => {
-        const selected = index === active;
-        tab.setAttribute('aria-selected', String(selected));
-        tab.tabIndex = selected ? 0 : -1;
-        panels[index].hidden = !selected;
+  const evaluationSteps = document.querySelector('.booking-steps');
+  if (evaluationSteps) {
+    function alignEvaluationMarkers() {
+      const steps = [...evaluationSteps.children];
+      const positions = steps.map(step => {
+        const title = step.querySelector('h3').getBoundingClientRect();
+        const box = step.getBoundingClientRect();
+        return { center: title.left + title.width / 2, top: box.top, left: box.left };
       });
-      if (animate && canAnimate()) play(panels[active], [{ opacity: .72 }, { opacity: 1 }], { duration: 200, easing: 'ease-out' });
+      steps.forEach((step, index) => {
+        const position = positions[index];
+        const next = positions[index + 1];
+        const distance = next && Math.abs(next.top - position.top) < 1 ? next.center - position.center : 0;
+        step.style.setProperty('--booking-marker-x', `${position.center - position.left}px`);
+        step.style.setProperty('--booking-connector-width', `${distance}px`);
+      });
     }
-    tabs.forEach((tab, index) => {
-      panels[index].setAttribute('role', 'tabpanel');
-      panels[index].setAttribute('aria-labelledby', tab.id);
-      tab.addEventListener('click', () => selectService(index, true));
-      tab.addEventListener('keydown', event => {
-        const next = {
-          [verticalTabs.matches ? 'ArrowUp' : 'ArrowLeft']: (index + tabs.length - 1) % tabs.length,
-          [verticalTabs.matches ? 'ArrowDown' : 'ArrowRight']: (index + 1) % tabs.length,
-          Home: 0,
-          End: tabs.length - 1
-        }[event.key];
-        if (next === undefined) return;
-        event.preventDefault();
-        selectService(next, false);
-        tabs[next].focus();
+    alignEvaluationMarkers();
+    new ResizeObserver(alignEvaluationMarkers).observe(evaluationSteps);
+    document.fonts?.ready.then(alignEvaluationMarkers);
+  }
+
+  const faqList = document.querySelector('.question-list');
+  if (faqList) {
+    const compactFaq = matchMedia('(max-width: 690px)');
+    function reserveFaqHeight() {
+      if (compactFaq.matches) {
+        faqList.style.minHeight = '';
+        return;
+      }
+      const width = faqList.getBoundingClientRect().width;
+      if (!width) return;
+      const measure = faqList.cloneNode(true);
+      measure.className = 'question-list';
+      measure.removeAttribute('data-reveal');
+      measure.inert = true;
+      measure.setAttribute('aria-hidden', 'true');
+      Object.assign(measure.style, { position: 'absolute', width: `${width}px`, minHeight: '0', visibility: 'hidden' });
+      const questions = [...measure.querySelectorAll('details')];
+      questions.forEach(question => {
+        question.removeAttribute('name');
+        question.open = false;
       });
-    });
-    const linkedService = () => panels.findIndex(panel => `#${panel.id}` === location.hash);
-    selectService(Math.max(0, linkedService()), false);
-    serviceTabs.hidden = false;
-    addEventListener('hashchange', () => {
-      const index = linkedService();
-      if (index < 0) return;
-      selectService(index, false);
-      serviceTabs.scrollIntoView({ block: 'start' });
-    });
+      faqList.after(measure);
+      let height = 0;
+      for (const question of questions) {
+        question.open = true;
+        height = Math.max(height, measure.getBoundingClientRect().height);
+        question.open = false;
+      }
+      measure.remove();
+      faqList.style.minHeight = `${Math.ceil(height)}px`;
+    }
+    reserveFaqHeight();
+    window.addEventListener('resize', reserveFaqHeight, { passive: true });
+    document.fonts?.ready.then(reserveFaqHeight);
   }
 
   const voicesTitleAccent = document.querySelector('.voices-title-accent');
@@ -169,16 +183,26 @@
       for (const entry of entries) {
         if (!entry.isIntersecting) continue;
         observer.unobserve(entry.target);
+        entry.target.classList.remove('is-reveal-pending');
         if (!canAnimate() || revealed >= 5) continue;
         entry.target.style.setProperty('--enter-delay', `${revealed * 55}ms`);
         entry.target.classList.add('is-entering');
-        entry.target.addEventListener('animationend', () => {
+        const finishEntrance = event => {
+          if (event.target !== entry.target) return;
           entry.target.classList.remove('is-entering');
-        }, { once: true });
+          entry.target.removeEventListener('animationend', finishEntrance);
+        };
+        entry.target.addEventListener('animationend', finishEntrance);
         revealed++;
       }
-    }, { threshold: .12, rootMargin: '0px 0px -24px' });
-    document.querySelectorAll('[data-reveal]').forEach(element => observer.observe(element));
+    }, { threshold: .08, rootMargin: '0px 0px -30px' });
+    const candidates = document.querySelectorAll('[data-reveal], .voices-intro, .voices-gallery, .visit-heading h2, .newsletter h2, .newsletter-signup, .footer-body > *');
+    const targets = [...candidates].flatMap(element => getComputedStyle(element).display === 'contents' ? [...element.children] : [element]);
+    targets.forEach(element => {
+      if (element.closest('[hidden]')) return;
+      if (element.getBoundingClientRect().top >= innerHeight) element.classList.add('is-reveal-pending');
+      observer.observe(element);
+    });
   }
 
   const hero = document.querySelector('.masthead-photo img');
