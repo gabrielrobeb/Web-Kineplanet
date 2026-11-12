@@ -469,3 +469,49 @@ html:has(body.services-page) { scroll-behavior: auto; }
 .services-direct-pending body { visibility: hidden; }
 
 .services-page .service-content .action svg, .services-page .service-content .action:hover svg { transform: none; transition: none; }
+
+
+/* Médico Hogar: título a la izquierda, marca y beneficio agrupados a la derecha. */
+.agreements-partner { padding-block: clamp(76px,7vw,112px); }
+.partner-right-group { display: grid; grid-template-columns: minmax(160px,.75fr) minmax(0,1fr); gap: clamp(24px,2.5vw,40px); align-items: center; }
+.partner-content > .partner-group-logo { display: block; width: 100%; max-width: 300px; height: 130px; margin: 0; object-fit: cover; object-position: center; }
+.partner-right-group p { margin: 0; max-width: 40ch; font-size: 19px; line-height: 1.5; }
+.partner-right-group strong { color: var(--deep); font-weight: 650; }
+.agreements-page .partner-right-group .action { margin-top: 22px; max-width: 100%; gap: 12px; padding-inline: 20px; font: 600 15px/1.3 var(--description-font); }
+.partner-right-group .action svg,.partner-right-group .action:hover svg { width: 18px; height: 18px; flex-shrink: 0; transform: none; transition: none; }
+@media(min-width:691px) and (max-width:1000px) {
+  .agreements-partner .partner-layout { grid-template-columns: minmax(0,.65fr) minmax(0,1.35fr); gap: 32px; }
+  .partner-right-group { grid-template-columns: 130px minmax(0,1fr); gap: 22px; }
+  .partner-content > .partner-group-logo { height: 100px; object-fit: contain; }
+  .partner-right-group p { font-size: 18px; }
+}
+@media(max-width:690px) {
+  .agreements-partner .partner-layout { gap: 20px; }
+  .partner-right-group { grid-template-columns: minmax(0,1fr); gap: 12px; justify-items: center; }
+  .partner-content > .partner-group-logo { width: 260px; max-width: 100%; height: 120px; margin-inline: auto; }
+  .partner-right-group p { margin-inline: auto; max-width: 32ch; font-size: 17px; }
+  .agreements-page .partner-right-group .action { width: fit-content; margin-top: 22px; }
+}
+
+.partner-brand-name { white-space: nowrap; }
+
+.partner-right-group > div { border-left: 1px solid #13344735; padding-left: 28px; align-self: center; }
+.partner-right-group { align-items: center; }
+@media(min-width:691px) and (max-width:1000px) { .partner-right-group > div { padding-left: 22px; } }
+@media(max-width:690px) { .partner-right-group > div { border-left: 0; border-top: 1px solid #13344735; padding: 22px 0 0; width: 100%; } }
+
+/* Contacto: una sola jerarquía para las tres columnas. */
+@media(min-width:1001px) { .contact-information-layout { grid-template-columns: repeat(3,minmax(0,1fr)); } }
+.contact-page .contact-information :is(.contact-channel-link,p,dt,dd) { color: #405c6b; font: 400 18px/1.5 var(--description-font); }
+.contact-page .contact-information .contact-phones { gap: 12px; margin-top: 0; }
+.contact-page .contact-information .contact-channel-link { display: inline-flex; align-items: center; gap: 12px; }
+.contact-page .contact-information .contact-email { margin-top: 12px; }
+.contact-channel-link svg { width: 18px; height: 18px; flex-shrink: 0; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.contact-schedule dl { gap: 18px; }
+.contact-page .contact-schedule dd { margin-top: 4px; }
+@media(max-width:690px) { .contact-page .contact-information :is(.contact-channel-link,p,dt,dd) { font-size: 17px; } }
+
+.contact-information-layout { text-align: center; }
+.contact-page main .contact-information h2 { margin-inline: auto; }
+.contact-page .contact-information .contact-phones { justify-items: center; }
+.contact-coverage p { margin-inline: auto; }

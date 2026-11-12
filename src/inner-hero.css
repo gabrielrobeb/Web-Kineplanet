@@ -1,0 +1,26 @@
+/* Cabecera compartida de las páginas interiores. */
+.inner-hero { display: grid; place-items: center; min-height: 560px; padding-block: 164px 80px; color: #fffefa; text-align: center; background: linear-gradient(115deg,#244f60e8,#133447fa),var(--wall-light) center / cover no-repeat; }
+.inner-hero-content { display: grid; justify-items: center; gap: 28px; }
+.inner-page .inner-hero h1 { margin: 0; max-width: 25ch; color: #fffefa; font: 400 clamp(52px,5.9vw,88px)/1.02 var(--display); letter-spacing: -.035em; text-transform: none; }
+.inner-page .inner-hero p { margin: 0; max-width: 62ch; color: #dce8ed; font: 400 clamp(18px,1.5vw,21px)/1.5 var(--description-font); }
+.inner-page .site-bar { color: #fffefa; }
+.inner-page .site-bar .bar-inner { padding-inline: 0; }
+.inner-page .site-bar .bar-inner::before { content: none; }
+.inner-page .site-bar .brand { position: relative; }
+.inner-page .site-bar .brand-wordmark { position: absolute; inset: 0; clip-path: inset(0 0 0 30%); filter: brightness(0) invert(1); }
+.inner-page .site-bar .bar-contact { background: var(--white); color: var(--deep); }
+.inner-page .site-bar .bar-contact svg { background: var(--hero-lime); color: var(--deep); }
+.inner-page .site-bar a:focus-visible,.inner-page .site-bar summary:focus-visible { outline: 2px solid var(--hero-lime); outline-offset: 5px; }
+.agreements-page .agreements-directory,.contact-page .contact-information { padding-top: clamp(62px,7vw,104px); }
+.team-founder-section { padding-block: clamp(62px,7vw,104px); }
+.team-founder-section .team-alternative-founders { margin-top: 0; }
+@media(max-width:690px) {
+  .inner-hero { min-height: 440px; padding-block: 132px 60px; }
+  .inner-hero-content { gap: 22px; }
+  .inner-page .inner-hero h1 { font-size: clamp(38px,10vw,54px); line-height: 1.04; }
+  .inner-page .inner-hero p { max-width: 34ch; font-size: 17px; }
+  .inner-page .site-bar .bar-inner { padding-inline: 0; }
+  .inner-page .mobile-nav summary { padding: 12px 0 12px 12px; }
+  .agreements-page .agreements-directory,.contact-page .contact-information { padding-top: 42px; }
+  .team-founder-section { padding-block: 42px; }
+}
