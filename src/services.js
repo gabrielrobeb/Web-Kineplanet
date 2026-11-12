@@ -1,20 +1,23 @@
 (() => {
-  const nav = document.querySelector('.services-navigation');
-  if (!nav) return;
-  const links = [...nav.querySelectorAll('a')];
-  const sections = links.map(link => document.getElementById(link.hash.slice(1))).filter(Boolean);
-  let pending = false;
-  const update = () => {
-    pending = false;
-    const threshold = nav.getBoundingClientRect().height + innerHeight * .26;
-    let current = sections[0];
-    for (const section of sections) if (section.getBoundingClientRect().top <= threshold) current = section;
-    links.forEach(link => {
-      if (link.hash === '#' + current.id) link.setAttribute('aria-current', 'location');
-      else link.removeAttribute('aria-current');
-    });
+  const panels = [...document.querySelectorAll('.page-service')];
+  if (!panels.length) return;
+  const root = document.documentElement;
+  let initialized = false;
+  const goDirect = () => {
+    let target;
+    try { target = panels.find(panel => panel.id === decodeURIComponent(location.hash.slice(1))); }
+    catch { target = null; }
+    if (target) {
+      scrollTo({ top: target.getBoundingClientRect().top + scrollY, behavior: 'instant' });
+      target.querySelectorAll('.is-reveal-pending').forEach(item => item.classList.remove('is-reveal-pending'));
+    }
+    root.classList.remove('services-direct-pending');
   };
-  addEventListener('scroll', () => { if (!pending) { pending = true; requestAnimationFrame(update); } }, { passive: true });
-  addEventListener('resize', update);
-  update();
+  addEventListener('hashchange', goDirect);
+  addEventListener('pageshow', () => { if (initialized && location.hash) goDirect(); });
+  document.fonts.ready.then(() => {
+    initialized = true;
+    if (location.hash) requestAnimationFrame(goDirect);
+    else root.classList.remove('services-direct-pending');
+  });
 })();

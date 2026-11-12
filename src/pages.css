@@ -418,3 +418,54 @@ html:has(body.services-page) { scroll-padding-top: 0; }
 .agreements-page .agreements-heading { padding-top: clamp(168px,15vw,216px); }
 .agreements-page .agreements-heading h1 { font-size: clamp(52px,5.9vw,88px); line-height: 1.02; }
 @media(max-width:690px) { .agreements-page .agreements-heading { padding-top: 148px; } .agreements-page .agreements-heading h1 { font-size: clamp(38px,10vw,54px); line-height: 1.04; } }
+
+/* Contacto: encabezado y datos con el mismo ritmo que Servicios y Convenios. */
+.contact-opening-layout { grid-template-columns: minmax(0,1.25fr) minmax(0,.85fr); }
+.contact-opening { padding-bottom: calc(38px + clamp(62px,7vw,104px)); }
+@media(max-width:690px) {
+  .contact-opening-layout { grid-template-columns: minmax(0,1fr); }
+  .contact-opening { padding-bottom: 78px; }
+}
+
+.services-page .service-summary h3 { display: inline-block; width: fit-content; max-width: 100%; padding: 8px 12px; background: var(--hero-lime); border-radius: 3px; font: 500 clamp(20px,1.7vw,25px)/1.12 var(--display); letter-spacing: -.015em; }
+.services-page .service-summary p { margin-top: 12px; }
+@media(max-width:690px) { .services-page .service-summary h3 { font-size: 23px; } }
+
+.services-page .service-summary h3 { background: var(--deep); color: var(--white); }
+
+/* Pulido de Servicios: énfasis más ligero y mejor equilibrio de altura. */
+.services-page .service-summary h3 { padding: 6px 10px; font-size: clamp(19px,1.45vw,22px); line-height: 1.15; }
+.services-page .service-summary p { margin-top: 10px; line-height: 1.5; }
+.services-page .service-summary section { padding-block: 12px; }
+.services-page .service-summary section:first-child { padding-top: 0; }
+.services-page .service-summary section:last-child { padding-bottom: 0; }
+.services-page .service-content .action { margin-top: 26px; }
+@media(min-width:691px) {
+  .services-page .service-visual img { aspect-ratio: 1.18; }
+  .services-page .page-service { padding-bottom: clamp(56px,5vw,80px); }
+}
+@media(max-width:690px) {
+  .services-page .service-summary h3 { font-size: 21px; }
+  .services-page .service-summary section { padding-block: 13px; }
+  .services-page .service-content .action { margin-top: 24px; }
+}
+
+/* Más aire y un inicio de lectura ligeramente más bajo junto a la foto. */
+@media(min-width:691px) {
+  .services-page .service-content { padding-top: 18px; }
+  .services-page .service-summary section { padding-block: 16px; }
+  .services-page .service-summary section:first-child { padding-top: 0; }
+  .services-page .service-summary section:last-child { padding-bottom: 0; }
+  .services-page .service-content .action { margin-top: 34px; }
+}
+
+@media(min-width:691px) {
+  .services-page .service-content { padding-top: 54px; }
+  .services-page .service-content .action { margin-top: 42px; }
+}
+
+/* Acceso directo a especialidades sin desplazamiento animado. */
+html:has(body.services-page) { scroll-behavior: auto; }
+.services-direct-pending body { visibility: hidden; }
+
+.services-page .service-content .action svg, .services-page .service-content .action:hover svg { transform: none; transition: none; }

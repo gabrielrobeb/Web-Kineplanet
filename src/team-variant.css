@@ -78,3 +78,30 @@
 .team-alternative-copy h1 { font-size: clamp(52px,5.9vw,88px); line-height: 1.02; }
 @media(min-width:691px) and (max-width:1100px) { .team-alternative-copy { align-items: start; } }
 @media(max-width:690px) { .team-alternative-hero { padding-top: 148px; } .team-alternative-copy h1 { font-size: clamp(38px,10vw,54px); line-height: 1.04; } }
+
+/* Fundadoras bajo la cabecera y nombres con una estructura común. */
+.team-alternative-layout { display: block; }
+.team-alternative-copy { display: grid; grid-template-columns: minmax(0,1.4fr) minmax(0,.85fr); gap: clamp(40px,7vw,112px); align-items: end; }
+.team-alternative-copy h1 { grid-row: auto; }
+.team-alternative-copy p { margin: 0; }
+.team-alternative-founders { width: min(1080px,100%); margin: calc(38px + clamp(62px,7vw,104px)) auto 0; gap: clamp(24px,4vw,56px); }
+.founder-alternative figure img { aspect-ratio: 4/4.3; }
+.founder-alternative figcaption { inset: auto 30px 30px; }
+.team-alternative main .founder-alternative h2 { font-size: clamp(34px,3.2vw,48px); line-height: 1.02; }
+.person-given,.person-family { display: block; }
+.team-alternative main .portrait-person h3 { min-height: 2.2em; max-width: none; font-size: clamp(24px,1.9vw,31px); line-height: 1.1; }
+.founder-alternative-details > p:first-child { min-height: 3em; }
+@media(min-width:691px) and (max-width:1100px) {
+  .portrait-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .team-alternative-copy { grid-template-columns: minmax(0,1fr); gap: 28px; }
+  .team-alternative-copy p { max-width: 55ch; }
+}
+@media(max-width:690px) {
+  .team-alternative-copy { display: block; }
+  .team-alternative-copy p { margin: 24px auto 0; }
+  .team-alternative-founders { margin-top: 56px; gap: 18px; }
+  .founder-alternative figure img { aspect-ratio: 3/4.3; }
+  .founder-alternative figcaption { inset: auto 12px 18px; }
+  .team-alternative main .founder-alternative h2 { font-size: clamp(22px,5.6vw,28px); }
+  .team-alternative main .portrait-person h3 { font-size: 30px; }
+}
