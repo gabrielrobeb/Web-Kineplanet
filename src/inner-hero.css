@@ -24,3 +24,12 @@
   .agreements-page .agreements-directory,.contact-page .contact-information { padding-top: 42px; }
   .team-founder-section { padding-block: 42px; }
 }
+
+/* Cabeceras móviles compactas, con ancho disponible para el texto. */
+@media(max-width:700px){
+ .inner-page .inner-hero { min-height:0; padding-block:120px 44px; }
+ .inner-page .inner-hero-content { width:calc(100% - 44px); max-width:none; gap:20px; }
+ .inner-page .inner-hero h1 { width:100%; max-width:none; font-size:clamp(34px,9.2vw,44px); line-height:1.06; text-wrap:balance; }
+ .inner-page .inner-hero h1 br { display:none; }
+ .inner-page .inner-hero p { width:100%; max-width:none; font-size:17px; line-height:1.5; text-wrap:pretty; }
+}

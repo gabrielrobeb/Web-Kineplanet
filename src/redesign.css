@@ -1213,3 +1213,16 @@ html .visit.process.process-timeline-section { background:var(--deep); color:var
  body:not(.inner-page) #newsletter-title { font-size:clamp(30px,3.15vw,48px); line-height:1.08; max-width:26ch; }
  .newsletter-layout { grid-template-columns:minmax(0,1.1fr) minmax(0,1fr); }
 }
+
+/* Ajustes finales de respiración y orden en móvil. */
+@media(max-width:700px){
+ .booking-steps { margin-top:52px; }
+ .booking-cta { margin-top:46px; }
+ body:not(.inner-page) .questions .editorial-layout { gap:52px; }
+ .team { padding-top:80px; }
+ .proof { padding-block:58px; }
+ .home-agreements-copy { display:contents; }
+ .home-agreements-copy h2 { order:0; }
+ .home-agreements-carousel { order:1; min-width:0; }
+ .home-agreements .home-agreements-link { order:2; justify-self:center; margin-top:6px; }
+}
