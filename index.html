@@ -35,6 +35,8 @@
   <link rel="stylesheet" href="./src/redesign.css">
   <script src="./src/redesign.js" defer></script>
   <script src="./src/redesign-timeline.js" defer></script>
+  <link rel="stylesheet" href="./src/home-agreements.css">
+  <script src="./src/home-agreements.js" defer></script>
 </head>
 <body id="inicio">
   <div class="arrival-loader" aria-hidden="true">
@@ -129,6 +131,8 @@
       </div>
     </section>
 
+
+
     <section class="team chapter" id="equipo" aria-labelledby="team-title">
       <div class="frame team-spread">
         <div class="team-note" data-reveal>
@@ -172,7 +176,7 @@
       </div>
     </section>
 
-    <section class="voices chapter" id="testimonios" aria-labelledby="voices-title">
+    <div class="testimonials-agreements-background"><section class="voices chapter" id="testimonios" aria-labelledby="voices-title">
       <div class="frame voices-layout">
         <div class="voices-intro">
           <h2 id="voices-title">Lo que opinan<br>los pacientes de<br><span class="voices-title-accent">Kineplanet.</span></h2>
@@ -218,6 +222,23 @@
       </div>
     </section>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <section class="home-agreements" id="convenios" aria-labelledby="home-agreements-title"><div class="frame home-agreements-layout"><div class="home-agreements-copy" data-reveal><h2 id="home-agreements-title">Convenios para<br><span class="title-accent">tu atención.</span></h2><a class="action home-agreements-link" href="./convenios/index.html">Ver todos los convenios <svg aria-hidden="true"><use href="#diagonal"/></svg></a></div><div class="home-agreements-carousel" aria-roledescription="carrusel" aria-label="Isapres, municipalidades e instituciones" data-reveal><div class="home-agreements-panel"><div class="home-agreements-slide is-active" id="home-agreements-isapres" role="group" aria-label="Isapres" data-logo-count="8" ><div class="home-agreement-logo"><img src="./public/images/convenios/masvida.png" alt="Nueva Masvida" width="220" height="90" loading="lazy"></div><div class="home-agreement-logo"><img src="./public/images/convenios/vidatres.png" alt="Vida Tres" width="220" height="90" loading="lazy"></div><div class="home-agreement-logo"><img src="./public/images/convenios/cruzblanca.png" alt="Cruz Blanca" width="220" height="90" loading="lazy"></div><div class="home-agreement-logo"><img src="./public/images/convenios/colmena.png" alt="Colmena" width="220" height="90" loading="lazy"></div><div class="home-agreement-logo"><img src="./public/images/convenios/consalud.png" alt="Consalud" width="220" height="90" loading="lazy"></div><div class="home-agreement-logo"><img src="./public/images/convenios/fundacion.jpg" alt="Fundación" width="220" height="90" loading="lazy"></div><div class="home-agreement-logo"><img src="./public/images/convenios/banmedica.png" alt="Banmédica" width="220" height="90" loading="lazy"></div><div class="home-agreement-logo"><img src="./public/images/convenios/esencial.webp" alt="Esencial" width="220" height="90" loading="lazy"></div></div><div class="home-agreements-slide " id="home-agreements-municipalidades" role="group" aria-label="Municipalidades" data-logo-count="5" hidden><div class="home-agreement-logo"><img src="./public/images/convenios/condes.png" alt="Las Condes" width="220" height="90" loading="lazy"></div><div class="home-agreement-logo"><img src="./public/images/convenios/nunoa.webp" alt="Ñuñoa" width="220" height="90" loading="lazy"></div><div class="home-agreement-logo"><img src="./public/images/convenios/florida.png" alt="La Florida" width="220" height="90" loading="lazy"></div><div class="home-agreement-logo"><img src="./public/images/convenios/huechuraba.webp" alt="Huechuraba" width="220" height="90" loading="lazy"></div><div class="home-agreement-logo"><img src="./public/images/convenios/puentealto.webp" alt="Puente Alto" width="220" height="90" loading="lazy"></div></div><div class="home-agreements-slide " id="home-agreements-instituciones" role="group" aria-label="Instituciones" data-logo-count="5" hidden><div class="home-agreement-logo"><img src="./public/images/convenios/chileactores.png" alt="Chileactores" width="220" height="90" loading="lazy"></div><div class="home-agreement-logo"><img src="./public/images/convenios/judicial.jpg" alt="Bienestar Poder Judicial" width="220" height="90" loading="lazy"></div><div class="home-agreement-logo"><img src="./public/images/convenios/security.jpg" alt="Vida Security" width="220" height="90" loading="lazy"></div><div class="home-agreement-logo"><img src="./public/images/convenios/consorcio.webp" alt="Consorcio" width="220" height="90" loading="lazy"></div><div class="home-agreement-logo"><img src="./public/images/convenios/clubvida.jpg" alt="Club Vida" width="220" height="90" loading="lazy"></div></div></div></div></div></section></div>
+
     <section class="visit process process-timeline-section" id="proceso" aria-labelledby="visit-title">
       <div class="frame">
         <header class="visit-heading"><h2 id="visit-title">De tu primer mensaje a la atención en tu hogar.</h2></header>
@@ -229,24 +250,9 @@
       </div>
     </section>
 
-    <section class="booking chapter" id="evaluacion" aria-labelledby="booking-title">
-      <div class="frame">
-        <h2 id="booking-title" data-reveal>Agenda tu primera<br><span class="booking-title-highlight">sesión de evaluación.</span></h2>
-        <ol class="booking-steps" aria-label="Qué incluye la evaluación" data-reveal>
-          <li><h3><span aria-hidden="true">01</span>Conversamos</h3><p>Revisamos tus antecedentes, el motivo de consulta y las actividades que quieres recuperar.</p></li>
-          <li><h3><span aria-hidden="true">02</span>Evaluamos</h3><p>Evaluamos tu movilidad, fuerza, equilibrio o función respiratoria, según la atención que necesitas.</p></li>
-          <li><h3><span aria-hidden="true">03</span>Definimos objetivos</h3><p>Acordamos contigo las prioridades del tratamiento y los objetivos de tu recuperación.</p></li>
-          <li><h3><span aria-hidden="true">04</span>Te orientamos</h3><p>Te explicamos las indicaciones para casa y los próximos pasos de tu tratamiento.</p></li>
-        </ol>
-        <div class="booking-cta" data-reveal>
-          <a class="action" href="https://wa.me/56933965202?text=Hola%2C%20quiero%20coordinar%20una%20evaluaci%C3%B3n%20de%20kinesiolog%C3%ADa%20a%20domicilio.">Agendar Evaluación <svg aria-hidden="true"><use href="#right"/></svg></a>
-        </div>
-      </div>
-    </section>
-
     <section class="questions chapter" id="preguntas" aria-labelledby="questions-title">
       <div class="frame editorial-layout">
-        <h2 id="questions-title" data-reveal>Lo que necesitas saber <span class="title-accent-on-blue">antes de tu primera visita.</span></h2>
+        <h2 id="questions-title" data-reveal>Lo que necesitas saber <span class="title-accent">antes de tu primera visita.</span></h2>
         <div class="question-list" data-reveal>
           <details name="kineplanet-faq">
             <summary>¿Qué beneficios tiene la kinesiología a domicilio? <svg aria-hidden="true"><use href="#plus"/></svg></summary>
@@ -282,31 +288,22 @@
       </div>
     </section>
 
-    <section class="journal chapter" id="blog" aria-labelledby="journal-title" hidden>
+    <section class="booking chapter" id="evaluacion" aria-labelledby="booking-title">
       <div class="frame">
-        <h2 id="journal-title" data-reveal>Guías para preparar tu atención en casa.</h2>
-        <div class="journal-layout">
-          <details class="journal-feature" data-reveal open>
-            <summary>
-              <img src="./public/images/proceso-escena-1.webp" alt="" width="512" height="768" loading="lazy">
-              <span><span class="journal-title">Qué contar al pedir una visita por WhatsApp</span><svg aria-hidden="true"><use href="#plus"/></svg></span>
-            </summary>
-            <p>Indícanos tu comuna y el motivo de la consulta. Si escribes por un familiar, cuéntanos para quién es la atención y quién se encargará de coordinar.</p>
-            <p>Con esos datos revisamos la cobertura, el horario, los requisitos y el valor antes de programar una visita.</p>
-          </details>
-          <div class="journal-list" data-reveal>
-            <details>
-              <summary><img src="./public/images/cuidado-en-casa.webp" alt="" width="1536" height="1024" loading="lazy"><span class="journal-title">Qué pasa en la primera visita</span><svg aria-hidden="true"><use href="#plus"/></svg></summary>
-              <p>En la primera visita conversamos sobre las actividades que te gustaría recuperar o hacer con más comodidad. La evaluación sirve para definir el plan y acordar cómo revisarlo.</p>
-            </details>
-            <details>
-              <summary><img src="./public/images/vida-cotidiana.webp" alt="" width="1536" height="1024" loading="lazy"><span class="journal-title">Cómo coordinar una visita para un familiar</span><svg aria-hidden="true"><use href="#plus"/></svg></summary>
-              <p>Antes de la visita puedes preguntar por el profesional, el horario y los requisitos. Si habrá familiares o cuidadores presentes, también pueden plantear sus dudas.</p>
-            </details>
-          </div>
+        <h2 id="booking-title" data-reveal>Agenda tu primera<br><span class="booking-title-highlight">sesión de evaluación.</span></h2>
+        <ol class="booking-steps" aria-label="Qué incluye la evaluación" data-reveal>
+          <li><h3><span aria-hidden="true">01</span>Conversamos</h3><p>Revisamos tus antecedentes, el motivo de consulta y las actividades que quieres recuperar.</p></li>
+          <li><h3><span aria-hidden="true">02</span>Evaluamos</h3><p>Evaluamos tu movilidad, fuerza, equilibrio o función respiratoria, según la atención que necesitas.</p></li>
+          <li><h3><span aria-hidden="true">03</span>Definimos objetivos</h3><p>Acordamos contigo las prioridades del tratamiento y los objetivos de tu recuperación.</p></li>
+          <li><h3><span aria-hidden="true">04</span>Te orientamos</h3><p>Te explicamos las indicaciones para casa y los próximos pasos de tu tratamiento.</p></li>
+        </ol>
+        <div class="booking-cta" data-reveal>
+          <a class="action" href="https://wa.me/56933965202?text=Hola%2C%20quiero%20coordinar%20una%20evaluaci%C3%B3n%20de%20kinesiolog%C3%ADa%20a%20domicilio.">Agendar Evaluación <svg aria-hidden="true"><use href="#right"/></svg></a>
         </div>
       </div>
     </section>
+
+    <section class="home-journal journal chapter" id="blog" aria-labelledby="journal-title"><div class="frame"><h2 id="journal-title" data-reveal>Lecturas para<br><span class="title-accent">cuidarte mejor.</span></h2><div class="home-blog-editorial"><article class="article-preview article-featured" data-reveal><a href="https://kineplanet.cl/dia-mundial-del-acv/"><img src="./public/images/blog-acv.webp" alt="" width="1080" height="675" loading="lazy"><h3>Día Mundial del ACV: señales de alerta y la importancia de la rehabilitación</h3><p>Una lectura sobre el accidente cerebrovascular, sus señales de alerta y el papel de la rehabilitación.</p><span class="text-action">Leer artículo <svg aria-hidden="true"><use href="#diagonal"/></svg></span></a></article><div class="article-list"><article class="article-preview " data-reveal><a href="https://kineplanet.cl/desarrollo-psicomotor-infantil/"><img src="./public/images/blog-desarrollo.webp" alt="" width="1080" height="675" loading="lazy"><h3>Desarrollo psicomotor infantil: cómo estimularlo durante los primeros años</h3><p>Conoce cómo acompañar las habilidades que los niños adquieren durante sus primeros años.</p><span class="text-action">Leer artículo <svg aria-hidden="true"><use href="#diagonal"/></svg></span></a></article><article class="article-preview " data-reveal><a href="https://kineplanet.cl/dolor-cronico-estado-animo/"><img src="./public/images/blog-dolor.webp" alt="" width="1080" height="675" loading="lazy"><h3>Dolor crónico y estado de ánimo: cuando el dolor también desgasta</h3><p>El dolor persistente puede influir en el descanso y el bienestar emocional. Este artículo aborda esa relación.</p><span class="text-action">Leer artículo <svg aria-hidden="true"><use href="#diagonal"/></svg></span></a></article><article class="article-preview " data-reveal><a href="https://kineplanet.cl/actividad-fisica-y-salud-mental-copiar/"><img src="./public/images/blog-movimiento.webp" alt="" width="1080" height="675" loading="lazy"><h3>Día Mundial de la Salud Mental: el papel del movimiento en nuestro bienestar</h3><p>Una mirada al vínculo entre actividad física, movimiento y bienestar emocional.</p><span class="text-action">Leer artículo <svg aria-hidden="true"><use href="#diagonal"/></svg></span></a></article></div></div></div></section>
 
     <section class="newsletter chapter" id="newsletter" aria-labelledby="newsletter-title">
       <div class="frame newsletter-layout">
@@ -317,6 +314,8 @@
         </div>
       </div>
     </section>
+
+
   </main>
 
   <footer class="footer">
