@@ -1,0 +1,28 @@
+/* Encuadres consistentes sin alterar los retratos originales. */
+.team-portrait-photo,.founder-alternative figure,.portrait-person figure { background:#fff; }
+.team-portraits .team-portrait-photo { aspect-ratio:3/4; }
+.founder-alternative figure { aspect-ratio:4/4.3; }
+.portrait-person figure { position:relative; aspect-ratio:4/4.7; }
+.team-portraits img,.founder-alternative figure img,.portrait-person figure img {
+ position:absolute; left:50%; top:35%; width:var(--portrait-width,130%); height:auto; max-width:none; aspect-ratio:auto; object-fit:initial;
+ transform:translate(var(--portrait-x,-50%),var(--portrait-y,-32%));
+}
+img[src*="andrea-20261125"] { --portrait-width:136%; --portrait-x:-55%; --portrait-y:-22%; }
+img[src*="ximena-munoz-actualizada"] { --portrait-width:131%; --portrait-x:-56%; --portrait-y:-31%; }
+img[src*="cristian-20261125"] { --portrait-width:133%; --portrait-x:-50.7%; --portrait-y:-38.6%; }
+img[src*="soledad-20261125"] { --portrait-width:122%; --portrait-x:-53.3%; --portrait-y:-30.8%; }
+img[src*="hector-20261125"] { --portrait-width:94%; --portrait-x:-54.5%; --portrait-y:-31.6%; }
+img[src*="fernando-20261125"] { --portrait-width:120%; --portrait-x:-49%; --portrait-y:-28.3%; }
+img[src*="vanessa-20261125"] { --portrait-width:125%; --portrait-x:-50.7%; --portrait-y:-29.6%; }
+img[src*="jean-20261125"] { --portrait-width:152%; --portrait-x:-50.1%; --portrait-y:-23.6%; }
+img[src*="mauricio-20261125"] { --portrait-width:138%; --portrait-x:-49%; --portrait-y:-41.2%; }
+img[src*="matias-20261125"] { --portrait-width:121%; --portrait-x:-45.1%; --portrait-y:-33.1%; }
+@media(max-width:690px){
+ .founder-alternative figure { aspect-ratio:3/4; }
+ .portrait-person figure { aspect-ratio:1; }
+}
+
+/* Ajuste de distancia por contexto. */
+.team-portraits img { top:31%; }
+.founder-alternative figure img,.portrait-person figure img { width:calc(var(--portrait-width,130%) * .9); }
+@media(max-width:690px){ .founder-alternative figure img { top:39%; } }
